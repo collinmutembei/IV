@@ -1,0 +1,26 @@
+from django.db import models
+from api.models.users import UserProfile
+
+
+def set_upload_file_path(instance, filename):
+    user = UserProfile.objects.get(username=instance.uploaded_by.username)
+    if user.username == "anonymous":
+        file_path = "{0}/{1}".format('anonymous', filename)
+        return file_path
+    random_hex = user.uuid.hex
+    file_path = "{0}/{1}".format(random_hex[-20:], filename)
+    return file_path
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to=set_upload_file_path)
+    uploaded_by = models.ForeignKey(
+        UserProfile,
+        to_field='username',
+        on_delete=models.CASCADE
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.image

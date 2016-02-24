@@ -1,5 +1,5 @@
 - [x] CRUD operations on `user` endpoint
-- [ ] CRUD operations on `image` endpoint
+- [x] CRUD operations on `image` endpoint
   * direct upload to twitter
   * include brand text and hashtag ([#phedited](https://twitter.com/search?f=tweets&q=%23phedited%20since%3A2016-02-23%20include%3Aretweets&src=typd))
 - [ ] integrate social login ([twitter](https://dev.twitetr.com) and  [instagram](https://www.instagram.com/developer/))

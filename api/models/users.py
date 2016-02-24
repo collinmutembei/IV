@@ -80,7 +80,11 @@ class User(AbstractBaseUser):
     email = custom_model_field.EmailFieldCaseInsensitive(unique=True)
     first_name = models.CharField(max_length=70, blank=True)
     last_name = models.CharField(max_length=70, blank=True)
-    profile = models.ForeignKey(UserProfile, related_name="profile")
+    profile = models.ForeignKey(
+        UserProfile,
+        related_name="profile",
+        on_delete=models.CASCADE
+    )
     objects = AccountManager()
     USERNAME_FIELD = 'email'
 

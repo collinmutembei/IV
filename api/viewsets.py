@@ -1,5 +1,6 @@
 from api.models.users import UserProfile
-from api.serializers import UserSerializer
+from api.models.images import Image
+from api.serializers import UserSerializer, ImageSerializer
 from django.db import IntegrityError
 from rest_framework import viewsets, status
 from rest_framework.response import Response
@@ -28,3 +29,15 @@ class UserlistViewset(viewsets.ModelViewSet):
         return Response({
             'message': "user not created"
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ImageViewset(viewsets.ModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+
+    def perform_create(self, serializer):
+        if self.request.user.is_active:
+            serializer.save(uploaded_by=self.request.user.profile)
+        elif self.request.user.is_anonymous:
+            anonymous_user = UserProfile.objects.get(username="anonymous")
+            serializer.save(uploaded_by=anonymous_user)
