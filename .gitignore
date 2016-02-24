@@ -60,3 +60,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# exclude ssl cert and key
+*.crt
+*.key
