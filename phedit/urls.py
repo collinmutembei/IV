@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^api/', include('api.urls')),
+    url(r'', include('social.apps.django_app.urls', namespace='social')),
 ]
 
 if settings.DEBUG:
