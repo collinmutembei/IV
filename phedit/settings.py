@@ -13,16 +13,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import dj_database_url
 import os
 
-SOCIAL_AUTH_TWITTER_KEY = os.environ.get('SOCIAL_AUTH_TWITTER_KEY')
-SOCIAL_AUTH_TWITTER_SECRET = os.environ.get('SOCIAL_AUTH_TWITTER_SECRET')
-
-SOCIAL_AUTH_INSTAGRAM_KEY = os.environ.get('SOCIAL_AUTH_INSTAGRAM_KEY')
-SOCIAL_AUTH_INSTAGRAM_SECRET = os.environ.get('SOCIAL_AUTH_INSTAGRAM_SECRET')
-
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/api/'
-SOCIAL_AUTH_LOGIN_URL = '/'
-SOCIAL_AUTH_LOGIN_ERROR_URL = '/'
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -51,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework',
     "sslserver",
     'api',
-    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -79,8 +68,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social.apps.django_app.context_processors.backends',
-                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -142,15 +129,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 MEDIA_URL = '/uploads/'
 
+# use https on heroku deployed app
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
-AUTHENTICATION_BACKENDS = (
-    'social.backends.twitter.TwitterOAuth',
-    'social.backends.instagram.InstagramOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-)
-
-AUTHENTICATION_SETTINGS = (
-    'social.backends.insagram.InstagramOAuth2',
-)

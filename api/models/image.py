@@ -1,9 +1,9 @@
 from django.db import models
-from api.models.users import UserProfile
+from api.models.user import User
 
 
 def set_upload_file_path(instance, filename):
-    user = UserProfile.objects.get(username=instance.uploaded_by.username)
+    user = User.objects.get(username=instance.uploaded_by.username)
     if user.username == "anonymous":
         file_path = "{0}/{1}".format('anonymous', filename)
         return file_path
@@ -15,7 +15,7 @@ def set_upload_file_path(instance, filename):
 class Image(models.Model):
     image = models.ImageField(upload_to=set_upload_file_path)
     uploaded_by = models.ForeignKey(
-        UserProfile,
+        User,
         to_field='username',
         on_delete=models.CASCADE
     )

@@ -1,6 +1,5 @@
-from api.models.users import UserProfile
-from api.models.images import Image
-from django.contrib.auth.models import User
+from api.models.user import User
+from api.models.image import Image
 from rest_framework import serializers
 
 
@@ -8,24 +7,27 @@ class UserSerializer(serializers.ModelSerializer):
     """Serializer for user information"""
 
     uuid = serializers.UUIDField(read_only=True, format='hex')
-    email = serializers.EmailField(write_only=True, required=True)
     password = serializers.CharField(
         style={'input_type': 'password'},
         write_only=True,
         required=True
     )
-    avater_url = serializers.ReadOnlyField()
 
     class Meta:
-        model = UserProfile
-        fields = ('uuid', 'username', 'url', 'email', 'password', 'avater_url')
+        model = User
+        fields = ('uuid', 'username', 'url', 'password')
         extra_kwargs = {
             'url': {'lookup_field': 'username'}
         }
 
     def create(self, validated_data):
-        """Modify default method to create user."""
-        return User.create_userprofile(**validated_data)
+
+        user = User(
+            username=validated_data['username'].lower()
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
 
 
 class ImageSerializer(serializers.ModelSerializer):
