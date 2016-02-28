@@ -3,6 +3,7 @@ from api.models.user import User
 
 
 def set_upload_file_path(instance, filename):
+    """sets upload directory for users from a derivation of their uuid"""
     user = User.objects.get(username=instance.uploaded_by.username)
     if user.username == "anonymous":
         file_path = "{0}/{1}".format('anonymous', filename)
@@ -13,6 +14,7 @@ def set_upload_file_path(instance, filename):
 
 
 class Image(models.Model):
+    """defines image"""
     image = models.ImageField(upload_to=set_upload_file_path)
     uploaded_by = models.ForeignKey(
         User,

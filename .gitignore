@@ -64,3 +64,6 @@ target/
 # exclude ssl cert and key
 *.crt
 *.key
+
+# coveralls config file
+*.coveralls.yml
