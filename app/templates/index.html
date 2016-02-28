@@ -1,20 +1,29 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel='shortcut icon' href="{% static 'images/favicon.ico' %}" type='image/x-icon' />
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>PHEDIT</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="{% static 'styles/index.css' %}"/>
+        <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}"/>
     </head>
     <body class="app-background">
         {% block content %}
 
         {% endblock %}
+        <footer class="footer-custom">
+            <div class="container">
+                <p class="text-center">&copy; collin mutembei</p>
+            </div>
+        </footer>
+        <script src="{% static 'scripts/jquery.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
+        <script src="{% static 'scripts/bootstrap.min.js' %}" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
+
 </html>
