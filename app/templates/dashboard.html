@@ -22,7 +22,17 @@
         <div class="col-md-8">
             <div class="workspace panel panel-default">
                 <div class="panel-body">
-                    <p class="dz-default dz-message">drop image file here or click to upload</p>
+                    <form  ng-controller="MyCtrl" name="form">
+                        <div ngf-select="upload($file)" ngf-pattern="'image/*'" ngf-drop="upload($file)" ngf-min-height="100" ngf-multiple="false">
+
+                            <!-- listen on emit on file upload to display image -->
+                            {% verbatim %}
+                            <p>{{message}}</p>
+                            {% endverbatim %}
+
+                        </div>
+                        <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+                    </form>
                 </div>
             </div>
         </div>
