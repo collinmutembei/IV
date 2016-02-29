@@ -9,12 +9,13 @@
 }
 
 .navbar-brand {
-    color: #000;
+    color: #164186;
     float: left;
     height: 50px;
     padding: 15px 15px;
     font-size: 24px;
     line-height: 20px;
+    margin-top: 10px;
 }
 
 .btn-signin {
@@ -22,7 +23,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #2196f3;
+    border: 1px solid #164186;
     border-radius: 4px;
     text-shadow: none;
     font-weight: bold;
@@ -30,6 +31,7 @@
 
 .btn-signin a {
     text-decoration: none;
+    color: black;
 }
 
 .footer-custom {
@@ -53,3 +55,18 @@
     transform: translate(-50%, -50%);
     font-size: 18px;
 }
+
+.img-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #164186;
+    background-color: transparent;
+}
+
+a:hover {
+    background-color: transparent;
+}
+
+.profile {
+    display: inline-block;
+ }

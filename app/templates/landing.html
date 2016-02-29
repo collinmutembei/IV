@@ -7,6 +7,7 @@
     </div>
 </nav>
 <div class="container">
-    <button type="button" class="btn btn-large btn-signin"><a href="/accounts/twitter/login/?process=login">login with twitter</a><i class="fa fa-twitter"></i></button>
+    {% load socialaccount %}
+    <button type="button" class="btn btn-large btn-signin"><a href="{% provider_login_url "twitter" method="oauth2" %}">login with twitter </a><i class="fa fa-twitter"></i></button>
 </div>
 {% endblock %}

@@ -11,5 +11,6 @@ branches:
   only:
       - master
       - develop
+      - feature/app
 after_success:
     - coveralls
