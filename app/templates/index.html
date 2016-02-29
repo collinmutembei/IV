@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pheditApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,9 @@
             </div>
         </footer>
         <script src="{% static 'scripts/jquery.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
-        <script type="text/javascript" src="{% static 'scripts/dropzone.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/angular.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/ng-file-upload-all.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/app.js' %}"></script>
         <script src="{% static 'scripts/bootstrap.min.js' %}" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 
