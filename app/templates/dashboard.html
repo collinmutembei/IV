@@ -12,7 +12,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="profile">
-                        <img class="img-circle" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+                        {% if user.is_authenticated and user.socialaccount_set.all.0.get_avatar_url %}
+                            <img class="img-circle" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+                        {% else %}
+                            <img class="img-circle" src="{% static 'images/profile.png' %}" />
+                        {% endif %}
                     </a>
                 </li>
             </ul>
@@ -27,7 +31,7 @@
                     {% verbatim %}
                     <div id="button-wrapper" ng-hide="images.length">
                         <button ngf-select="upload($file)">
-                            <p>upload an image to edit</p>
+                            <p>click to upload an image</p>
                             <div class="fill"></div>
                             <div class="fa fa-check"></div>
                         </button>

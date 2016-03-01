@@ -3,5 +3,5 @@ from app.views import landing, dashboard
 
 urlpatterns = [
     url(r'^$', landing),
-    url(r'^dashboard/', dashboard),
+    url(r'^web/', dashboard),
 ]

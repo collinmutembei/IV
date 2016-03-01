@@ -3,14 +3,10 @@ from django.shortcuts import render
 
 
 def landing(request):
-    """renders landing page for project"""
-    if request.user.is_authenticated():
-        return render(request, 'dashboard.html')
-    return render(request, 'landing.html')
+    """redirects user to web app"""
+    return HttpResponseRedirect("/web/")
 
 
 def dashboard(request):
     """renders the projects dashboard"""
-    if request.user.is_authenticated():
-        return render(request, 'dashboard.html')
-    return HttpResponseRedirect("/")
+    return render(request, 'dashboard.html')
