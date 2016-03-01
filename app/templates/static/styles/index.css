@@ -9,7 +9,7 @@
 }
 
 .navbar-brand {
-    color: #164186;
+    color: #292c2f;
     float: left;
     height: 50px;
     padding: 15px 15px;
@@ -29,7 +29,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #164186;
+    border: 1px solid #292c2f;
     border-radius: 4px;
     text-shadow: none;
     font-weight: bold;
@@ -40,7 +40,8 @@
     color: black;
 }
 
-.workspace {
+.fixed-workspace {
+    width: 100%;
     min-height: 600px;
     z-index: 2;
     position: relative;
@@ -49,19 +50,24 @@
     background-color: #ddd;
 }
 
-.panel-body p {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
+.workspace {
+    width: 100%;
+    min-height: auto;
+    z-index: 2;
+    position: relative;
+    border: dashed 5px #777;
+    border-radius: 20px;
+    background-color: #ddd;
+}
+
+.panel-body {
+    padding: 0;
 }
 
 .img-circle {
     width: 40px;
     height: 40px;
-    border: 2px solid #164186;
+    border: 2px solid #292c2f;
     background-color: transparent;
 }
 
@@ -74,7 +80,6 @@ a:hover {
  }
 
  .drop-placeholder {
-  padding: 16px 0;
   vertical-align: middle;
   text-align: center;
   font-size: 20px;
@@ -117,4 +122,129 @@ a:hover {
 	text-align: center;
 	line-height: 35px;
 	margin-right: 10px;
+}
+
+.user-images {
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+}
+.user-images div {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  margin: .5vw;
+}
+.user-images div img {
+  max-width: 600px;
+  max-height: 100%;
+}
+@media screen and (max-width: 400px) {
+  header div { margin: 0; }
+  header { padding: 0; }
+
+}
+
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background: #33383b;
+}
+
+#button-wrapper {
+    width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-transition: .3s all ease .3s;
+    transition: .3s all ease .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+button {
+    width: 100%;
+    background: #292c2f;
+    border: none;
+    border-radius: 10px;
+    padding: 0 auto;
+    cursor: pointer;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+    position: relative;
+}
+
+button p {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+button .fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    background: #33383b;
+    border-radius: 50px;
+}
+
+button .fa {
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 50px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+
+#button-wrapper.clicked button {
+    background: #ccc;
+    margin-top: 25px;
+}
+
+#button-wrapper.clicked button p {
+    max-height: 0;
+    overflow: hidden
+}
+
+#button-wrapper.clicked button .fill {
+    width: 100%;
+    -webkit-transition: .3s all ease .3s;
+    transition: 2s all ease .6s;
+}
+
+#button-wrapper.success button {
+    margin: 0;
+    padding: 25px;
+    width: 50px;
+}
+
+#button-wrapper.success button .fa {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s all ease .3s;
+    transition: .3s all ease .3s;
 }
