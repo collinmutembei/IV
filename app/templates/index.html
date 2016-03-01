@@ -16,15 +16,26 @@
         {% block content %}
 
         {% endblock %}
+
         <footer class="footer-custom">
             <div class="container">
-                <p class="text-center">&copy; collin mutembei</p>
+                <div class="footer-left">
+                    <h2>PHEDIT</h2>
+                </div>
+                <div class="footer-right">
+                    <a href="//twitter.com/search?f=tweets&q=%23phedited%20since%3A2016-02-23%20include%3Aretweets&src=typd"><i class="fa fa-twitter"></i></a>
+                    <a href="//github.com/andela-cmutembei/IV"><i class="fa fa-github"></i></a>
+                </div>
             </div>
         </footer>
+
         <script src="{% static 'scripts/jquery.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/angular.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/angular-resource.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/ng-file-upload-all.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/app.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/service.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/controller.js' %}"></script>
         <script src="{% static 'scripts/bootstrap.min.js' %}" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 
