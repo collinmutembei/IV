@@ -19,13 +19,38 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" ng-controller="MyCtrl">
     <div class="row">
-        <div class="col-md-12">
-            <div class="workspace panel panel-default">
+        <div class="col-md-8">
+            <div class="panel panel-default" ng-class="images.length ? 'workspace' : 'fixed-workspace'">
                 <div class="panel-body">
-                    <div class="drop-placeholder">
-                        <p>DROP IMAGE HERE</p>
+                    {% verbatim %}
+                    <div id="button-wrapper" ng-hide="images.length">
+                        <button ngf-select="upload($file)">
+                            <p>upload an image to edit</p>
+                            <div class="fill"></div>
+                            <div class="fa fa-check"></div>
+                        </button>
+                    </div>
+                    {% endverbatim %}
+                    <div class="drop-placeholder" ng-repeat="image in images | orderBy: '-created_at'">
+                        <form  name="form">
+                            <div ngf-pattern="'image/*'" ngf-drop="upload($file)" ngf-min-height="100" ngf-multiple="false">
+
+                                <!-- listen on emit on file upload to display image -->
+                                {% verbatim %}
+                                <div class="user-images">
+                                    <div class="image" ng-if="$first">
+                                        <img ng-src="{{image.image}}"/>
+                                    </div>
+
+                                </div>
+                                <!-- <img ng-src="{{image.image}}"/> -->
+                                {% endverbatim %}
+
+                            </div>
+                            <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+                        </form>
                     </div>
                 </div>
             </div>
