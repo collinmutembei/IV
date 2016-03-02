@@ -22,6 +22,7 @@
     width: 131px;
     height: 88px;
     margin-top: -10px;
+    margin-left: -27px;
 }
 
 .btn-signin {
@@ -42,10 +43,10 @@
 
 .fixed-workspace {
     width: 100%;
-    min-height: 600px;
+    min-height: 500px;
     z-index: 2;
     position: relative;
-    border: dashed 5px #777;
+    border: 1px solid #999999;
     border-radius: 20px;
     background-color: #ddd;
 }
@@ -55,7 +56,7 @@
     min-height: auto;
     z-index: 2;
     position: relative;
-    border: dashed 5px #777;
+    border: 1px solid #999999;
     border-radius: 20px;
     background-color: #ddd;
 }
@@ -69,15 +70,12 @@
     height: 40px;
     border: 2px solid #292c2f;
     background-color: transparent;
+    margin: 16px 0px 0px 0px;
 }
 
 a:hover {
     background-color: transparent;
 }
-
-.profile {
-    display: inline-block;
- }
 
  .drop-placeholder {
   vertical-align: middle;
@@ -93,7 +91,7 @@ a:hover {
 	width: 100%;
 	font: bold 16px sans-serif;
 	text-align: left;
-
+    z-index: 3;
 	padding: 30px 30px 30px;
 	margin-top: 80px;
 	overflow: hidden;
@@ -247,4 +245,44 @@ button .fa {
     transform: scale(1);
     -webkit-transition: .3s all ease .3s;
     transition: .3s all ease .3s;
+}
+
+.featured-content {
+    min-height: 200px;
+    border: 1px solid #999999;
+    border-radius: 20px;
+    background-color: #ddd;
+    overflow: auto;
+}
+
+#content {
+    margin-bottom: 100px;
+}
+
+.col-md-8 .col-xs-12 {
+    padding-right: 22px;
+    padding-left: 10px;
+}
+
+.image-options {
+    position: absolute;
+    background-color: #000;
+    bottom: -8px;
+    left: 210px;
+    width: 260px;
+    height: 75px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.6;
+}
+
+.image-options button {
+    width: 110px;
+    height: 50px;
+    border: 1px solid #999999;
+    /*background-color: #fff;*/
+    border-radius: 5px;
+    margin: 12px 7px 0px 8px;
+    opacity: 1.0;
+    font-size: 25px;
 }
