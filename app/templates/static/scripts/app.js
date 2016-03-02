@@ -1,4 +1,4 @@
-var app = angular.module('pheditApp', ['ngResource', 'ngFileUpload']);
+var app = angular.module('pheditApp', ['ngResource', 'ui.bootstrap', 'ngFileUpload']);
 
 app.config(function($httpProvider) {
 
