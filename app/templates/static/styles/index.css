@@ -280,9 +280,18 @@ button .fa {
     width: 110px;
     height: 50px;
     border: 1px solid #999999;
-    /*background-color: #fff;*/
     border-radius: 5px;
     margin: 12px 7px 0px 8px;
     opacity: 1.0;
     font-size: 25px;
+}
+
+.effects-section {
+    width: 69%;
+    height: 50px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 45px;
+    position: relative;
+
 }
