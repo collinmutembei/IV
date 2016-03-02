@@ -1,12 +1,12 @@
 language: python
 python:
-    - "3.4"
+    - "3.5"
 install: pip install -r requirements.txt
 env:
   global:
     - TRAVIS_BUILD=true
 script:
-    - coverage run --append manage.py test
+    - coverage run --append manage.py test tests
 branches:
   only:
       - master

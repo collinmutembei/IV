@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-cmutembei/IV.svg?branch=develop)](https://travis-ci.org/andela-cmutembei/IV)
-[![Coverage Status](https://coveralls.io/repos/andela-cmutembei/IV/badge.svg?branch=develop)](https://coveralls.io/github/andela-cmutembei/IV?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/andela-cmutembei/IV/badge.svg?branch=feature/app)](https://coveralls.io/github/andela-cmutembei/IV?branch=feature/app)
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/9e68169eaae44b4ea781295f597949dd/snapshot/origin:develop:HEAD/badge.svg)](https://www.quantifiedcode.com/app/project/9e68169eaae44b4ea781295f597949dd)
 
 ## [PHEDIT](https://phedit.herokuapp.com)
