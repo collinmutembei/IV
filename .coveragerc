@@ -2,9 +2,9 @@
 omit =
     *virtualenv*
     *envs*
-    */migrations/*
+    *migrations/*
     */python?.?/*
     *__init__*
     */tests/*
     *manage.py
-    *settings.py*
+    *settings.py
