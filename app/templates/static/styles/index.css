@@ -295,3 +295,7 @@ button .fa {
     position: relative;
 
 }
+
+.hidden {
+    display: none;
+}

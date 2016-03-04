@@ -22,17 +22,17 @@
 <div id="content" class="container" ng-controller="MyCtrl">
     <div class="row effects-section">
         <div class="btn-group">
-            <label class="btn btn-primary" ng-model="effectsModel.normal" uib-btn-checkbox btn-checkbox-false>normal</label>
-            <label class="btn btn-primary" ng-model="effectsModel.hefe" uib-btn-checkbox btn-checkbox-false>hefe</label>
-            <label class="btn btn-primary" ng-model="effectsModel.inkwell" uib-btn-checkbox btn-checkbox-false>inkwell</label>
-            <label class="btn btn-primary" ng-model="effectsModel.willow" uib-btn-checkbox btn-checkbox-false>willow</label>
-            <label class="btn btn-primary" ng-model="effectsModel.sierra" uib-btn-checkbox btn-checkbox-false>sierra</label>
-            <label class="btn btn-primary" ng-model="effectsModel.amaro" uib-btn-checkbox btn-checkbox-false>amaro</label>
-            <label class="btn btn-primary" ng-model="effectsModel.hudson" uib-btn-checkbox btn-checkbox-false>hudson</label>
-            <label class="btn btn-primary" ng-model="effectsModel.rise" uib-btn-checkbox btn-checkbox-false>rise</label>
-            <label class="btn btn-primary" ng-model="effectsModel.mayfair" uib-btn-checkbox btn-checkbox-false>mayfair</label>
-            <label class="btn btn-primary" ng-model="effectsModel.lark" uib-btn-checkbox btn-checkbox-false>lark</label>
-            <label class="btn btn-primary" ng-model="effectsModel.juno" uib-btn-checkbox btn-checkbox-false>juno</label>
+            <label class="btn btn-primary" ng-model="effectsModel.normal" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">normal</label>
+            <label class="btn btn-primary" ng-model="effectsModel.hefe" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">hefe</label>
+            <label class="btn btn-primary" ng-model="effectsModel.inkwell" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">inkwell</label>
+            <label class="btn btn-primary" ng-model="effectsModel.willow" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">willow</label>
+            <label class="btn btn-primary" ng-model="effectsModel.sierra" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">sierra</label>
+            <label class="btn btn-primary" ng-model="effectsModel.amaro" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">amaro</label>
+            <label class="btn btn-primary" ng-model="effectsModel.hudson" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">hudson</label>
+            <label class="btn btn-primary" ng-model="effectsModel.rise" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">rise</label>
+            <label class="btn btn-primary" ng-model="effectsModel.mayfair" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">mayfair</label>
+            <label class="btn btn-primary" ng-model="effectsModel.lark" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">lark</label>
+            <label class="btn btn-primary" ng-model="effectsModel.juno" uib-btn-checkbox btn-checkbox-false ng-class="{ 'disabled': imageuploaded}">juno</label>
         </div>
     </div>
     <div class="row">
@@ -55,6 +55,7 @@
                                 <div class="user-images">
                                     <div class="image" ng-if="$first">
                                         <div ng-if="image.image">
+                                            <input type="checkbox" ng-model="imageuploaded" class="hidden">
                                             <img ng-src="{{image.image}}"/>
                                             <div class="image-options">
                                                 <button type="button" class="btn btn-primary">apply</button>
