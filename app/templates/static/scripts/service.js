@@ -7,6 +7,13 @@ angular.module('pheditApp').factory('MainService', function($resource) {
             }
         }, {
             stripTrailingSlashes: false
+        }),
+        image_effects: $resource('/effects/', {}, {
+            send_effects: {
+                method: 'POST'
+            }
+        }, {
+            stripTrailingSlashes: false
         })
     };
 });
