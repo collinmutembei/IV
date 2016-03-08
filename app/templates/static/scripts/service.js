@@ -8,7 +8,7 @@ angular.module('pheditApp').factory('MainService', function($resource) {
         }, {
             stripTrailingSlashes: false
         }),
-        image_effects: $resource('/effects/', {}, {
+        image_effects: $resource('/api/phedited/', {}, {
             send_effects: {
                 method: 'POST'
             }

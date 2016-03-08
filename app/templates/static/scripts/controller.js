@@ -1,6 +1,10 @@
 angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainService', function ($scope, Upload, MainService) {
 
-    $scope.imageuploaded = true;
+    $scope.imageuploaded = false;
+
+    $scope.currentimage = function(url){
+        $scope.imageurl = url
+    }
 
     $scope.$on('uploadComplete', function () {
         $scope.images = MainService.all_images.getImages();
@@ -19,7 +23,9 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
 
 
     $scope.$on('addeffect', function () {
-        MainService.image_effects.send_effects($scope.applyeffects);
+        console.log($scope.imageurl);
+        console.log($scope.applyeffects);
+        MainService.image_effects.send_effects({'original_image_url': $scope.imageurl, 'effects': $scope.applyeffects});
     });
 
     $scope.upload = function (file) {
@@ -32,10 +38,11 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
                 $(this).addClass("success");
             });
             $scope.$emit('uploadComplete');
-            $scope.imageuploaded = false;
+            $scope.imageuploaded = true;
             console.log('file uploaded successfully');
         }, function (resp) {
             console.log('file uploaded error: ' + resp.status);
+            //file fails to upload, display error message
         });
     };
 }]);
