@@ -1,5 +1,6 @@
 from api.models.user import User
 from api.models.image import Image
+from api.models.phedited import PheditedImage
 from rest_framework import serializers
 
 
@@ -39,4 +40,26 @@ class ImageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Image
-        fields = ('image', 'uploaded_by', 'created_at', 'updated_at')
+        fields = ('id', 'image', 'uploaded_by', 'created_at', 'updated_at')
+
+
+class PheditedImageSerializer(serializers.ModelSerializer):
+    """Serializer for phedited images"""
+
+    original_image = serializers.URLField(
+        allow_blank=False,
+        read_only=True
+    )
+    phedited_image = serializers.ImageField(use_url=True, read_only=True)
+    phedited_by = serializers.ReadOnlyField(source='uploaded_by.username')
+    effects = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = PheditedImage
+        fields = (
+            'original_image',
+            'phedited_image',
+            'phedited_by',
+            'phedited_at',
+            'effects'
+        )

@@ -5,13 +5,15 @@ chardet==2.3.0
 click==5.1
 colorama==0.3.3
 coverage==4.0.3
+coveralls==1.1
 cssselect==0.9.1
 decorator==4.0.9
 defusedxml==0.4.1
 dj-database-url==0.4.0
 dj-static==0.0.6
-Django==1.9.2
+Django==1.9.3
 django-allauth==0.24.1
+django-appconf==1.0.1
 django-nose==1.4.3
 django-sslify==0.2.7
 django-sslserver==0.18
@@ -32,6 +34,7 @@ oauthlib==1.0.3
 path.py==8.1.2
 pexpect==4.0.1
 pickleshare==0.6
+pilkit==1.1.13
 Pillow==3.1.1
 pinax-cli==0.5
 psycopg2==2.6.1

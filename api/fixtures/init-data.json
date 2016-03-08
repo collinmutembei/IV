@@ -67,8 +67,8 @@
         "model": "contenttypes.contenttype",
         "pk": 9,
         "fields": {
-            "app_label": "account",
-            "model": "emailaddress"
+            "app_label": "api",
+            "model": "pheditedimage"
         }
     },
     {
@@ -76,15 +76,15 @@
         "pk": 10,
         "fields": {
             "app_label": "account",
-            "model": "emailconfirmation"
+            "model": "emailaddress"
         }
     },
     {
         "model": "contenttypes.contenttype",
         "pk": 11,
         "fields": {
-            "app_label": "socialaccount",
-            "model": "socialapp"
+            "app_label": "account",
+            "model": "emailconfirmation"
         }
     },
     {
@@ -92,7 +92,7 @@
         "pk": 12,
         "fields": {
             "app_label": "socialaccount",
-            "model": "socialaccount"
+            "model": "socialapp"
         }
     },
     {
@@ -100,15 +100,23 @@
         "pk": 13,
         "fields": {
             "app_label": "socialaccount",
+            "model": "socialaccount"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "socialaccount",
             "model": "socialtoken"
         }
     },
     {
         "model": "sessions.session",
-        "pk": "wes9dcr9z3dr0pvzg2ik1zhftzfgjv3j",
+        "pk": "t8cn7wfygjvue5yl7i53gnzmhhyl2mzg",
         "fields": {
-            "session_data": "YmM5NmRjZGFkMzc3YjlhYjU1YTQzMzkzMjE1MTBmODE1YjZlNWIzZDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTg3NjY1ZGU1NmNhNmRmNzFlZTE3M2Y5N2MxMDcxOGMzY2QwYTRkOSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
-            "expire_date": "2016-03-11T09:38:00.738Z"
+            "session_data": "MTkzN2U2YmM3OTMxNDg2OTk5YmJhNTIyMDQzNWFhY2IwOGY0NzEyMDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiMDcwYWQ2MGM1ZDU4MDc2NDZlMDEyNmExY2NmOWU1Y2MwZjc0YzgzMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+            "expire_date": "2016-03-22T19:58:47.509Z"
         }
     },
     {
@@ -353,134 +361,161 @@
         "model": "auth.permission",
         "pk": 25,
         "fields": {
-            "name": "Can add email address",
+            "name": "Can add phedited image",
             "content_type": 9,
-            "codename": "add_emailaddress"
+            "codename": "add_pheditedimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 26,
         "fields": {
-            "name": "Can change email address",
+            "name": "Can change phedited image",
             "content_type": 9,
-            "codename": "change_emailaddress"
+            "codename": "change_pheditedimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 27,
         "fields": {
-            "name": "Can delete email address",
+            "name": "Can delete phedited image",
             "content_type": 9,
-            "codename": "delete_emailaddress"
+            "codename": "delete_pheditedimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 28,
         "fields": {
-            "name": "Can add email confirmation",
+            "name": "Can add email address",
             "content_type": 10,
-            "codename": "add_emailconfirmation"
+            "codename": "add_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 29,
         "fields": {
-            "name": "Can change email confirmation",
+            "name": "Can change email address",
             "content_type": 10,
-            "codename": "change_emailconfirmation"
+            "codename": "change_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 30,
         "fields": {
-            "name": "Can delete email confirmation",
+            "name": "Can delete email address",
             "content_type": 10,
-            "codename": "delete_emailconfirmation"
+            "codename": "delete_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 31,
         "fields": {
-            "name": "Can add social application",
+            "name": "Can add email confirmation",
             "content_type": 11,
-            "codename": "add_socialapp"
+            "codename": "add_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 32,
         "fields": {
-            "name": "Can change social application",
+            "name": "Can change email confirmation",
             "content_type": 11,
-            "codename": "change_socialapp"
+            "codename": "change_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 33,
         "fields": {
-            "name": "Can delete social application",
+            "name": "Can delete email confirmation",
             "content_type": 11,
-            "codename": "delete_socialapp"
+            "codename": "delete_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 34,
         "fields": {
-            "name": "Can add social account",
+            "name": "Can add social application",
             "content_type": 12,
-            "codename": "add_socialaccount"
+            "codename": "add_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 35,
         "fields": {
-            "name": "Can change social account",
+            "name": "Can change social application",
             "content_type": 12,
-            "codename": "change_socialaccount"
+            "codename": "change_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 36,
         "fields": {
-            "name": "Can delete social account",
+            "name": "Can delete social application",
             "content_type": 12,
-            "codename": "delete_socialaccount"
+            "codename": "delete_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 37,
         "fields": {
-            "name": "Can add social application token",
+            "name": "Can add social account",
             "content_type": 13,
-            "codename": "add_socialtoken"
+            "codename": "add_socialaccount"
         }
     },
     {
         "model": "auth.permission",
         "pk": 38,
         "fields": {
-            "name": "Can change social application token",
+            "name": "Can change social account",
             "content_type": 13,
-            "codename": "change_socialtoken"
+            "codename": "change_socialaccount"
         }
     },
     {
         "model": "auth.permission",
         "pk": 39,
         "fields": {
-            "name": "Can delete social application token",
+            "name": "Can delete social account",
             "content_type": 13,
+            "codename": "delete_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can add social application token",
+            "content_type": 14,
+            "codename": "add_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can change social application token",
+            "content_type": 14,
+            "codename": "change_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can delete social application token",
+            "content_type": 14,
             "codename": "delete_socialtoken"
         }
     },
@@ -488,14 +523,14 @@
         "model": "api.user",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$24000$GoUWbaRlC0gG$n12fj5tC8y50EkZ7BJHYp4QHF/Uo8tnQioL6BxgXOZw=",
+            "password": "pbkdf2_sha256$24000$mPvpaLwPEQUQ$L14SnwmHIsgHr4mWwWH/+F4ItZDI53EANEvL5rRf12w=",
             "last_login": null,
             "is_superuser": false,
-            "uuid": "b54fcd30-7f39-48d4-9b22-26bacb9d4557",
+            "uuid": "82e4c5d0-4a8e-4d6a-b436-2c50b24089d1",
             "username": "anonymous",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2016-02-26T09:37:26.113Z",
+            "date_joined": "2016-03-08T19:57:24.611Z",
             "groups": [],
             "user_permissions": []
         }
@@ -504,14 +539,14 @@
         "model": "api.user",
         "pk": 2,
         "fields": {
-            "password": "pbkdf2_sha256$24000$0ANEIfp6P6Ek$/G4PvGwUOyfMIfXxjtOpMXGvux9UCnECnow50bvsgtE=",
-            "last_login": "2016-02-26T09:38:00.736Z",
+            "password": "pbkdf2_sha256$24000$Iq7jagH5KhYa$h5UbXUBPmk/rv/aFkefbdLWv4rmcC9rmgVagTqARKzw=",
+            "last_login": "2016-03-08T19:58:47.507Z",
             "is_superuser": true,
-            "uuid": "c182fab2-007d-47bd-bda6-72d9896fbffe",
+            "uuid": "cae36871-71a3-42ab-bdf6-601297e9b8d3",
             "username": "admin",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2016-02-26T09:37:46.404Z",
+            "date_joined": "2016-03-08T19:57:49.075Z",
             "groups": [],
             "user_permissions": []
         }
@@ -520,20 +555,7 @@
         "model": "admin.logentry",
         "pk": 1,
         "fields": {
-            "action_time": "2016-02-26T09:38:46.665Z",
-            "user": 2,
-            "content_type": 11,
-            "object_id": "1",
-            "object_repr": "phedit",
-            "action_flag": 1,
-            "change_message": "Added."
-        }
-    },
-    {
-        "model": "admin.logentry",
-        "pk": 2,
-        "fields": {
-            "action_time": "2016-02-26T09:39:09.924Z",
+            "action_time": "2016-03-08T19:59:08.415Z",
             "user": 2,
             "content_type": 6,
             "object_id": "1",
@@ -544,15 +566,15 @@
     },
     {
         "model": "admin.logentry",
-        "pk": 3,
+        "pk": 2,
         "fields": {
-            "action_time": "2016-02-26T09:39:20.646Z",
+            "action_time": "2016-03-08T19:59:40.389Z",
             "user": 2,
-            "content_type": 11,
+            "content_type": 12,
             "object_id": "1",
             "object_repr": "phedit",
-            "action_flag": 2,
-            "change_message": "No fields changed."
+            "action_flag": 1,
+            "change_message": "Added."
         }
     }
 ]
