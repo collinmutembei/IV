@@ -16,16 +16,18 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         angular.forEach($scope.effectsModel, function (value, key) {
             if (value) {
                 $scope.applyeffects.push(key);
-                $scope.$emit('addeffect');
             }
         });
+        $scope.$emit('addeffect');
     });
 
 
     $scope.$on('addeffect', function () {
         console.log($scope.imageurl);
         console.log($scope.applyeffects);
-        MainService.image_effects.send_effects({'original_image_url': $scope.imageurl, 'effects': $scope.applyeffects});
+        if ($scope.imageurl) {
+            MainService.image_effects.send_effects({'original_image_url': $scope.imageurl, 'effects': $scope.applyeffects});
+        }
     });
 
     $scope.upload = function (file) {
