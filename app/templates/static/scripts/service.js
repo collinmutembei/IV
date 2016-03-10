@@ -11,6 +11,10 @@ angular.module('pheditApp').factory('MainService', function($resource) {
         image_effects: $resource('/api/phedited/', {}, {
             send_effects: {
                 method: 'POST'
+            },
+            get_effects: {
+                method: 'GET',
+                isArray: true
             }
         }, {
             stripTrailingSlashes: false
