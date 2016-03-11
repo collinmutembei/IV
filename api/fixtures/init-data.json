@@ -113,6 +113,14 @@
     },
     {
         "model": "sessions.session",
+        "pk": "s2bgi7np5d297bj7t436s2vpd5mczqhm",
+        "fields": {
+            "session_data": "YjY2MDc0ZWI2OGRmMGU0MDJlYWRiMDk5NzhjNWRhN2I3MTA5ZGI3MTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNzBhZDYwYzVkNTgwNzY0NmUwMTI2YTFjY2Y5ZTVjYzBmNzRjODMwIn0=",
+            "expire_date": "2016-03-25T12:53:10.196Z"
+        }
+    },
+    {
+        "model": "sessions.session",
         "pk": "t8cn7wfygjvue5yl7i53gnzmhhyl2mzg",
         "fields": {
             "session_data": "MTkzN2U2YmM3OTMxNDg2OTk5YmJhNTIyMDQzNWFhY2IwOGY0NzEyMDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiMDcwYWQ2MGM1ZDU4MDc2NDZlMDEyNmExY2NmOWU1Y2MwZjc0YzgzMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
@@ -135,6 +143,34 @@
             "name": "phedit",
             "client_id": "D1WRQCXHoiuQhQhjUbitehVkc",
             "secret": "oahUAxAGfT0f3t4VDYyYP76yNwEbLnSh7oCdSxrPfGjPCtHHhM",
+            "key": "",
+            "sites": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "socialaccount.socialapp",
+        "pk": 2,
+        "fields": {
+            "provider": "facebook",
+            "name": "phedit",
+            "client_id": "996943793715324",
+            "secret": "502d952c08f5f4a0c87b488bcf87ecff",
+            "key": "",
+            "sites": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "socialaccount.socialapp",
+        "pk": 3,
+        "fields": {
+            "provider": "instagram",
+            "name": "phedit",
+            "client_id": "e284e60409954277ac20870c4bf06252",
+            "secret": "0b7cbaab1fe34dd789c94ebc7ed28030",
             "key": "",
             "sites": [
                 1
@@ -540,7 +576,7 @@
         "pk": 2,
         "fields": {
             "password": "pbkdf2_sha256$24000$Iq7jagH5KhYa$h5UbXUBPmk/rv/aFkefbdLWv4rmcC9rmgVagTqARKzw=",
-            "last_login": "2016-03-08T19:58:47.507Z",
+            "last_login": "2016-03-11T12:53:10.194Z",
             "is_superuser": true,
             "uuid": "cae36871-71a3-42ab-bdf6-601297e9b8d3",
             "username": "admin",
@@ -572,6 +608,32 @@
             "user": 2,
             "content_type": 12,
             "object_id": "1",
+            "object_repr": "phedit",
+            "action_flag": 1,
+            "change_message": "Added."
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2016-03-11T12:57:54.543Z",
+            "user": 2,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "phedit",
+            "action_flag": 1,
+            "change_message": "Added."
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2016-03-11T12:58:53.008Z",
+            "user": 2,
+            "content_type": 12,
+            "object_id": "3",
             "object_repr": "phedit",
             "action_flag": 1,
             "change_message": "Added."
