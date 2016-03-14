@@ -53,26 +53,25 @@ class PheditedImage(models.Model):
     effects = models.CharField(max_length=500)
 
     def save(self, *args, **kwargs):
-        if self.original_image:
-            image_request = requests.get(self.original_image)
-            image_bytes = io.BytesIO(image_request.content)
-            image = Image.open(image_bytes)
-            image_with_effect = apply_effects(image, self.effects)
-            edited_image = io.BytesIO()
-            image_with_effect.save(edited_image, format=image.format)
-            filename = os.path.basename(self.original_image)
-            edited_file = InMemoryUploadedFile(
-                edited_image,
-                None,
-                filename,
-                'image/jpeg',
-                edited_image.tell,
-                None
-            )
+        image_request = requests.get(self.original_image)
+        image_bytes = io.BytesIO(image_request.content)
+        image = Image.open(image_bytes)
+        filename = os.path.basename(self.original_image)
+        image_with_effect = apply_effects(image, self.effects)
+        edited_image = io.BytesIO()
+        image_with_effect.save(edited_image, format=image.format)
+        edited_file = InMemoryUploadedFile(
+            edited_image,
+            None,
+            filename,
+            'image/jpeg',
+            edited_image.tell,
+            None
+        )
 
-            self.phedited_image.save(
-                filename,
-                edited_file,
-                save=False,
-            )
+        self.phedited_image.save(
+            filename,
+            edited_file,
+            save=False,
+        )
         super(PheditedImage, self).save(*args, **kwargs)
