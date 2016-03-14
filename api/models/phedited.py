@@ -3,7 +3,7 @@ from api.models.user import User
 import requests
 import io
 import os
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageOps
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
 
@@ -29,13 +29,22 @@ def set_upload_file_path(instance, filename):
 
 
 def apply_effects(image, effects):
-    all_effects = {
-        'BLUR': ImageFilter.BLUR,
-        'CONTOUR': ImageFilter.CONTOUR,
-        'EMBOSS': ImageFilter.EMBOSS
-    }
     for effect in effects:
-        phedited = image.filter(all_effects[effect])
+        gray = ImageOps.grayscale(image)
+        all_effects = {
+            'BLUR': image.filter(ImageFilter.BLUR),
+            'CONTOUR': image.filter(ImageFilter.CONTOUR),
+            'EMBOSS': image.filter(ImageFilter.EMBOSS),
+            'SMOOTH': image.filter(ImageFilter.SMOOTH),
+            'HULK': ImageOps.colorize(gray, (0, 0, 0, 0), '#00ff00'),
+            'FLIP': ImageOps.flip(image),
+            'MIRROR': ImageOps.mirror(image),
+            'INVERT': ImageOps.invert(image),
+            'SOLARIZE': ImageOps.solarize(image),
+            'GREYSCALE': ImageOps.grayscale(image),
+
+        }
+        phedited = all_effects[effect]
         image = phedited
     return phedited
 

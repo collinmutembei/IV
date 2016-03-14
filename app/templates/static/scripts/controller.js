@@ -9,9 +9,9 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         }).then(function (response) {
             var $button = $("button");
             $button.parent().addClass("clicked").delay(2000).queue(function(){
-                $scope.imageuploaded = true;
-                $scope.$emit('uploadComplete');
             });
+            $scope.imageuploaded = true;
+            $scope.$emit('uploadComplete');
             console.log('photo uploaded successfully');
         }, function (error) {
             console.log('photo uploaded error: ' + error.status);
@@ -23,9 +23,11 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         MainService.all_images.getImages().
         $promise.
         then(function(result){
+            $scope.effectsModel = {}
             $scope.images = result
             $scope.original_image = result[result.length - 1].image
             $scope.imageurl = $scope.original_image
+            console.log($scope.imageurl);
         }).
         catch(function(response){
             console.log("failed to fetch images");
