@@ -2,14 +2,35 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
 
     $scope.imageuploaded = false;
 
-    $scope.currentimage = function(url){
-        $scope.imageurl = url
-    }
+    $scope.upload = function (file) {
+        Upload.upload({
+            url: '/api/images/',
+            data: {'image': file}
+        }).then(function (response) {
+            var $button = $("button");
+            $button.parent().addClass("clicked").delay(2000).queue(function(){
+                $scope.imageuploaded = true;
+                $scope.$emit('uploadComplete');
+            });
+            console.log('photo uploaded successfully');
+        }, function (error) {
+            console.log('photo uploaded error: ' + error.status);
+            //file fails to upload, display error message
+        });
+    };
 
     $scope.$on('uploadComplete', function () {
-        $scope.images = MainService.all_images.getImages();
+        MainService.all_images.getImages().
+        $promise.
+        then(function(result){
+            $scope.images = result
+            $scope.original_image = result[result.length - 1].image
+            $scope.imageurl = $scope.original_image
+        }).
+        catch(function(response){
+            console.log("failed to fetch images");
+        });
     });
-
 
     $scope.$watchCollection('effectsModel', function () {
         $scope.applyeffects = [];
@@ -21,30 +42,18 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         $scope.$emit('addeffect');
     });
 
-
     $scope.$on('addeffect', function () {
-        console.log($scope.imageurl);
-        console.log($scope.applyeffects);
-        if ($scope.imageurl) {
-            MainService.image_effects.send_effects({'original_image_url': $scope.imageurl, 'effects': $scope.applyeffects});
+        if ($scope.original_image && $scope.applyeffects.length > 0) {
+            MainService.image_effects.send_effects({'original_image_url': $scope.original_image, 'effects': $scope.applyeffects}).
+            $promise.
+            then(function(result){
+                $scope.imageurl = result.phedited_image;
+            }).
+            catch(function(response){
+                console.log("failed to apply effects");
+            });
+        } else {
+            $scope.imageurl = $scope.original_image
         }
     });
-
-    $scope.upload = function (file) {
-        Upload.upload({
-            url: '/api/images/',
-            data: {'image': file}
-        }).then(function (resp) {
-            var $button = $("button");
-            $button.parent().addClass("clicked").delay(2600).queue(function(){
-                $(this).addClass("success");
-            });
-            $scope.$emit('uploadComplete');
-            $scope.imageuploaded = true;
-            console.log('file uploaded successfully');
-        }, function (resp) {
-            console.log('file uploaded error: ' + resp.status);
-            //file fails to upload, display error message
-        });
-    };
 }]);

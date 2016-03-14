@@ -22,9 +22,9 @@
 <div id="content" class="container" ng-controller="MyCtrl">
     <div class="row effects-section">
         <div class="btn-group">
-            <label class="btn btn-primary" ng-model="effectsModel.BLUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">normal</label>
-            <label class="btn btn-primary" ng-model="effectsModel.CONTOUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">hefe</label>
-            <label class="btn btn-primary" ng-model="effectsModel.EMBOSS" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">inkwell</label>
+            <label class="btn btn-primary" ng-model="effectsModel.BLUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">blur</label>
+            <label class="btn btn-primary" ng-model="effectsModel.CONTOUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">contour</label>
+            <label class="btn btn-primary" ng-model="effectsModel.EMBOSS" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">emboss</label>
             <label class="btn btn-primary" ng-model="effectsModel.sharpen" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">willow</label>
             <label class="btn btn-primary" ng-model="effectsModel.sierra" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">sierra</label>
             <label class="btn btn-primary" ng-model="effectsModel.amaro" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">amaro</label>
@@ -55,12 +55,11 @@
                                 <div class="user-images">
                                     <div class="image" ng-if="$first">
                                         <div ng-if="image.image">
-                                            <input type="checkbox" ng-checked="currentimage(image.image)" ng-model="imageuploaded" class="hidden">
-                                            <img ng-src="{{image.image}}"/>
-                                            <div class="image-options">
+                                            <img ng-src="{{imageurl}}"/>
+                                            <!-- <div class="image-options">
                                                 <button type="button" class="btn btn-primary">apply</button>
                                                 <button type="button" class="btn btn-primary">save</button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
