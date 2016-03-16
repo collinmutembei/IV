@@ -27,7 +27,6 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             $scope.images = result
             $scope.original_image = result[result.length - 1].image
             $scope.imageurl = $scope.original_image
-            console.log($scope.imageurl);
         }).
         catch(function(response){
             console.log("failed to fetch images");
@@ -50,12 +49,29 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             $promise.
             then(function(result){
                 $scope.imageurl = result.phedited_image;
+                $scope.$emit('sharable_url');
             }).
             catch(function(response){
                 console.log("failed to apply effects");
             });
         } else {
             $scope.imageurl = $scope.original_image
+            $scope.share_url = $scope.imageurl
         }
     });
+
+    $scope.$on('sharable_url', function(){
+        $scope.share_url = $scope.imageurl
+    })
+
+    $scope.share_image = function(){
+        FB.ui(
+            {
+                method: 'feed',
+                link: $scope.share_url,
+                caption: '#phedited'
+            }, function(response){
+            }
+        );
+    };
 }]);

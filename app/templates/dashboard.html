@@ -19,7 +19,7 @@
         </div>
     </div>
 </div>
-<div id="content" class="container" ng-controller="MyCtrl">
+<div id="content" class="container">
     <div class="row effects-section">
         <div class="btn-group">
             <label class="btn btn-primary" ng-model="effectsModel.BLUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">blur</label>
@@ -55,10 +55,6 @@
                                     <div class="image" ng-if="$first">
                                         <div ng-if="image.image">
                                             <img ng-src="{{imageurl}}"/>
-                                            <!-- <div class="image-options">
-                                                <button type="button" class="btn btn-primary">apply</button>
-                                                <button type="button" class="btn btn-primary">save</button>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +69,32 @@
         <div class="col-md-4 col-xs-12">
             <div class="panel panel-default featured-content">
                 <div class="panel-body">
+                    <a class="twitter-timeline" href="https://twitter.com/hashtag/phedited" data-widget-id="709968197634629633">#phedited Tweets</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
             </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <!-- Share -->
+            {% verbatim %}
+            <div class="share-button" ng-hide="!(imageuploaded)">
+                <div class="lid">Share</div>
+                <div class="share-items-wrapper">
+                    <div class="share-items">
+                        <a data-layout="icon" class="share-item" ng-click="share_image()">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text={{share_url}}&hashtags=phedited&related=CollinMutembei" class="share-item">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="thank-you">
+                    You Rock
+                </div>
+            </div>
+            {% endverbatim %}
         </div>
     </div>
 </div>
