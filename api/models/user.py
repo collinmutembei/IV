@@ -69,4 +69,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     def get_short_name(self):
+        """returns username"""
         return self.username

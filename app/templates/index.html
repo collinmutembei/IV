@@ -1,0 +1,75 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" ng-app="pheditApp" ng-controller="MyCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='shortcut icon' href="{% static 'images/favicon.png' %}" type='image/x-icon' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PHEDIT</title>
+        <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}"/>
+    </head>
+    <body class="app-background">
+        {% block content %}
+
+        {% endblock %}
+
+        <footer class="footer-custom">
+            <div class="container">
+                <div class="footer-left">
+                    <h2>PHEDIT</h2>
+                </div>
+                <div class="footer-right">
+                    <a href="//twitter.com/search?f=tweets&q=%23phedited%20since%3A2016-02-23%20include%3Aretweets&src=typd"><i class="fa fa-twitter"></i></a>
+                    <a href="//github.com/andela-cmutembei/IV"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '996943793715324',
+                    xfbml      : true,
+                    version    : 'v2.5'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-74899239-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script src="{% static 'scripts/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/angular.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/angular-resource.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/ng-file-upload-all.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/ui-bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/angular-animate.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/app.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/service.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/controller.js' %}"></script>
+        <script src="{% static 'scripts/bootstrap.min.js' %}" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+
+</html>
