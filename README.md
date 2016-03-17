@@ -10,11 +10,11 @@ Phedit is a modern photo editing application that lets you express yourself thro
 
 #### TODO
 
-- [ ] User can login with Facebook
-- [ ] User can view their uploaded images
-- [ ] User can upload images on the application in a non-blocking manner
-- [ ] User can edit images by applying filter and effects
-- [ ] User can share images via a public url or on facebook
+- [x] User can login with Facebook
+- [x] User can view their uploaded images
+- [x] User can upload images on the application in a non-blocking manner
+- [x] User can edit images by applying filter and effects
+- [x] User can share images via a public url or on facebook
 
 #### License
 Copyright &copy; 2016 - Collin Mutembei
