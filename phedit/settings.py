@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.instagram',
     'allauth.socialaccount.providers.facebook',
     'app',
+    'django_nose',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -182,3 +183,9 @@ SOCIALACCOUNT_PROVIDERS = {
             ]
     }
 }
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+]
