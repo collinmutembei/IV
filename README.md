@@ -6,7 +6,7 @@
 
 > A picture is worth a thousand words - [English idiom](https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words)
 
-Phedit is a modern photo editing application that lets you express yourself through pictures. This project in still in development, you can view the project plan [here.](https://goo.gl/5zVk0I)
+Phedit is a modern photo editing application that lets you express yourself through pictures. This project in still in development, you can view the project plan [here.](https://goo.gl/nYK0Gy)
 
 #### TODO
 
