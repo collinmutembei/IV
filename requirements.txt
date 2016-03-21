@@ -57,4 +57,3 @@ six==1.10.0
 static3==0.6.1
 traitlets==4.1.0
 twtxt==1.0.1
-wheel==0.26.0
