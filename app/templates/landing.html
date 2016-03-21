@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="LoginCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'images/phedit.gif' %}" alt="logo">
+      </a>
+    </div>
+    {% load socialaccount %}
+    <p class="navbar-text navbar-right"><a href='{% provider_login_url "facebook" method="oauth2" %}' class="noline button is-dark is-outlined">get started</a></p>
+  </div>
+</nav>
+{% endblock %}
