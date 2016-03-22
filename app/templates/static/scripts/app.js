@@ -1,4 +1,4 @@
-angular.module('pheditApp', ['ngRoute', 'auth0', 'angular-storage', 'angular-jwt']);
+angular.module('pheditApp', ['ngRoute', 'auth0', 'angular-storage', 'angular-jwt', 'angulartics', 'angulartics.google.analytics']);
 
 angular.module('pheditApp').config(function (authProvider) {
   authProvider.init({
@@ -11,7 +11,7 @@ angular.module('pheditApp').config(function (authProvider) {
   auth.hookEvents();
 });
 
-angular.module('pheditApp').config(function($routeProvider){
+angular.module('pheditApp').config(function($routeProvider, $analyticsProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'static/pages/landing.html'
@@ -19,5 +19,7 @@ angular.module('pheditApp').config(function($routeProvider){
             templateUrl: 'static/pages/dashboard.html'
         }).when('/test', {
             templateUrl: 'static/pages/test.html'
+        }).otherwise({
+            redirectTo: '/'
         });
 });

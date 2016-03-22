@@ -14,6 +14,15 @@
     </head>
     <body ng-controller="mainCtrl">
         <div ng-view></div>
+        <!-- GA -->
+        <script>
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+           ga('create', 'UA-74899239-1', 'none');
+       </script>
+
         <script type="text/javascript" src="{% static 'scripts/jquery.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/bootstrap.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/angular.min.js' %}"></script>
@@ -25,6 +34,10 @@
         <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
         <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
         <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+        <!-- Setup analytics using angulartics -->
+        <script src="{% static 'scripts/angulartics.min.js' %}"></script>
+        <script src="{% static 'scripts/angulartics-google-analytics.min.js' %}"></script>
 
         <script type="text/javascript" src="{% static 'scripts/app.js' %}"></script>
         <script type="text/javascript" src="{% static 'scripts/controllers/controller.js' %}"></script>
