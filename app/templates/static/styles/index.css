@@ -14,6 +14,10 @@ body {
     color: #fff;
 }
 
+.hero.is-info {
+    background: url(../images/canvas-bg.png) repeat center center fixed;
+}
+
 .navbar-left > a > img {
     height: 75px;
     width: 100px;
@@ -30,4 +34,55 @@ body {
 
 .noline {
     margin-top: 25px;
+}
+
+.canvas {
+    border: 1px solid #222324;
+    border-radius: 6px;
+}
+
+.canvas p {
+    animation: neon 3s infinite;
+}
+@keyframes neon {
+    0% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
+    80% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
+    81% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+    94% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+    95% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
+    96% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+    97% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
+    98% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
+    99% {
+        color: #222;
+        text-shadow: 0 0 10px #000, 1px 1px rgb(99, 74, 82), -2px 0px 4px #29121A;
+    }
+    100% {
+        color: #E91E63;
+        text-shadow: 0 0 10px #E91E63, 1px 1px rgb(255, 149, 162), 0 0 280px #E91E9F;
+    }
 }

@@ -17,5 +17,7 @@ angular.module('pheditApp').config(function($routeProvider){
             templateUrl: 'static/pages/landing.html'
         }).when('/app', {
             templateUrl: 'static/pages/dashboard.html'
+        }).when('/test', {
+            templateUrl: 'static/pages/test.html'
         });
 });
