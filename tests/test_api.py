@@ -105,3 +105,14 @@ class PheditAPITestCase(APITestCase):
         self.assertEqual(response.status_code, 200)
 
         self.client.logout()
+
+    def test_redirect_when_accessing_webapp_unauthenticated(self):
+        """user gets redirected if they navigate to app directly"""
+        unauthenticated_response = self.client.get('/app/')
+        self.assertEqual(unauthenticated_response.status_code, 302)
+        self.client.login(
+            username='testuser',
+            password='ncvsN809ibkj!*HJ2612J'
+        )
+        authenticated_response = self.client.get('/app/')
+        self.assertEqual(authenticated_response.status_code, 200)
