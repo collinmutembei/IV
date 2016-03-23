@@ -20,34 +20,20 @@
     </div>
 </div>
 <div id="content" class="container">
-    <!-- <div class="row effects-section">
-        <div class="btn-group">
-            <label class="btn btn-primary" ng-model="effectsModel.BLUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">blur</label>
-            <label class="btn btn-primary" ng-model="effectsModel.CONTOUR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">contour</label>
-            <label class="btn btn-primary" ng-model="effectsModel.EMBOSS" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">emboss</label>
-            <label class="btn btn-primary" ng-model="effectsModel.FLIP" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">flip</label>
-            <label class="btn btn-primary" ng-model="effectsModel.MIRROR" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">mirror</label>
-            <label class="btn btn-primary" ng-model="effectsModel.GREYSCALE" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">greyscale</label>
-            <label class="btn btn-primary" ng-model="effectsModel.INVERT" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">invert</label>
-            <label class="btn btn-primary" ng-model="effectsModel.SOLARIZE" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">solarize</label>
-            <label class="btn btn-primary" ng-model="effectsModel.SMOOTH" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">smooth</label>
-            <label class="btn btn-primary" ng-model="effectsModel.HULK" uib-btn-checkbox btn-checkbox-false ng-disabled="!(imageuploaded)">hulk</label>
-        </div>
-    </div> -->
     <div class="row">
         <div class="col-md-2 col-md-offset-0">
             <div class="effects-workspace">
                 <span class="text-center col-md-12">effects</span>
                 <ul class="checkbox-grid">
-                    <li><label for="effect1">blur</label><input type="checkbox" name="effect1" ng-model="effectsModel.BLUR" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect2">contour</label><input type="checkbox" name="effect2" ng-model="effectsModel.CONTOUR" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect3">emboss</label><input type="checkbox" name="effect3" ng-model="effectsModel.EMBOSS" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect4">flip</label><input type="checkbox" name="effect4" ng-model="effectsModel.FLIP" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect5">mirror</label><input type="checkbox" name="effect5" ng-model="effectsModel.MIRROR" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect6">greyscale</label><input type="checkbox" name="effect6" ng-model="effectsModel.GREYSCALE" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect7">solarize</label><input type="checkbox" name="effect7" ng-model="effectsModel.INVERT" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect8">smooth</label><input type="checkbox" name="effect8" ng-model="effectsModel.SOLARIZE" ng-disabled="!(imageuploaded)"/></li>
-                    <li><label for="effect8">hulk</label><input type="checkbox" name="effect9" ng-model="effectsModel.HULK" ng-disabled="!(imageuploaded)"/></li>
+                    <li><label for="effect1">blur</label><input type="checkbox" id="effect1" ng-model="effectsModel.BLUR" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect2">contour</label><input type="checkbox" id="effect2" ng-model="effectsModel.CONTOUR" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect3">emboss</label><input type="checkbox" id="effect3" ng-model="effectsModel.EMBOSS" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect4">flip</label><input type="checkbox" id="effect4" ng-model="effectsModel.FLIP" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect5">mirror</label><input type="checkbox" id="effect5" ng-model="effectsModel.MIRROR" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect6">greyscale</label><input type="checkbox" id="effect6" ng-model="effectsModel.GREYSCALE" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect7">solarize</label><input type="checkbox" id="effect7" ng-model="effectsModel.INVERT" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect8">smooth</label><input type="checkbox" id="effect8" ng-model="effectsModel.SOLARIZE" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
+                    <li><label for="effect9">hulk</label><input type="checkbox" id="effect9" ng-model="effectsModel.HULK" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
                 </ul>
             </div>
         </div>
@@ -82,14 +68,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="col-md-4 col-xs-12">
-            <div class="panel panel-default featured-content">
-                <div class="panel-body">
-                    <a class="twitter-timeline" href="https://twitter.com/hashtag/phedited" data-widget-id="709968197634629633">#phedited Tweets</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </div>
-            </div>
-        </div> -->
         <div class="col-md-12 col-xs-12">
             <!-- Share -->
             {% verbatim %}
