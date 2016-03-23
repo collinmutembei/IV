@@ -10,11 +10,7 @@ app.config(function($httpProvider) {
 $(document).ready(function(){
     $('.share-button').on('click',function(){
         $(this).addClass('open');
-    })
-    // $( ".share-items" ).draggable({
-    //     axis: "x",
-    //     containment : ".share-items-wrapper"
-    // });
+    });
     $( ".share-item" ).on('click',function(){
         $('.share-button').addClass('shared');
         setTimeout(function(){
