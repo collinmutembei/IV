@@ -570,3 +570,33 @@ input[type=checkbox] {
         transform: translateY(0);
     }
 }
+
+.landing {
+    color: #000;
+    text-align: center;
+}
+
+.landing img {
+    margin-bottom: -30px;
+    width: 280px;
+    height: 210px;
+}
+
+.landing p {
+    font-size: 20px;
+}
+
+.landing .fb{
+    border: 1px solid #3b5998;
+    color: #3b5998;
+}
+
+.landing .twitter{
+    border: 1px solid #4099FF;
+    color: #4099FF;
+}
+
+.login-btn {
+    margin-top: 30px;
+    margin-right: 2px;
+}

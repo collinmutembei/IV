@@ -3,7 +3,7 @@
 {% load staticfiles %}
 
 {% block content %}
-<nav class="navbar navbar-default navbar-fixed-top">
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
@@ -13,5 +13,17 @@
     {% load socialaccount %}
     <p class="navbar-text navbar-right"><a href='{% provider_login_url "facebook" method="oauth2" %}'>get started</a></p>
   </div>
-</nav>
+</nav> -->
+<div class="landing">
+    <img src="{% static 'images/phedit.gif' %}" alt="logo">
+    <div class="row">
+        <h1>PHEDIT</h1>
+        <p>A modern photo-editing application</p>
+        <div class="login-btn">
+            <a href='{% provider_login_url "facebook" method="oauth2" %}' class="btn fb"><i class="fa fa-facebook"></i> login with facebook</a>
+            or
+            <a href='{% provider_login_url "twitter" %}' class="btn twitter"><i class="fa fa-twitter"></i> login with twitter</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
