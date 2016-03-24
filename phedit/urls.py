@@ -23,8 +23,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('api.urls')),
     url(r'^', include('app.urls')),
-    url(r'^accounts/', include('allauth.urls')),
     url(r'^accounts/logout/$', logout, {'next_page': '/'}),
+    url(r'^accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:

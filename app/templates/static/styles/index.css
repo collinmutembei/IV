@@ -600,3 +600,10 @@ input[type=checkbox] {
     margin-top: 30px;
     margin-right: 2px;
 }
+
+.logout-btn {
+    border: 1px solid #292c2f;;
+    margin-right: 10px;
+    margin-top: 22px;
+    color: #000;
+}
