@@ -6,13 +6,6 @@ html, body {
 
 body {
     background: url(../images/bgpattern.png) repeat center center fixed;
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:0;
-    margin:0;
     color: #fff;
 }
 
@@ -23,6 +16,7 @@ body {
 }
 
 .navbar-default {
+    position: relative;
     background-color: transparent;
     border: transparent;
 
