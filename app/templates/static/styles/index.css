@@ -87,7 +87,6 @@ body {
     width: 100%;
     min-height: 500px;
     z-index: 2;
-    /*position: relative;*/
     border: 1px solid #999999;
     border-radius: 10px;
     background-color: #ddd;
@@ -99,7 +98,6 @@ body {
     z-index: 2;
     position: relative;
     border: 1px solid #999999;
-    /*border-radius: 20px;*/
     background-color: #ddd;
 }
 
@@ -298,7 +296,6 @@ button .fa {
 .featured-content {
     max-height: 500px;
     border: 1px solid #999999;
-    /*border-radius: 20px;*/
     background-color: #ddd;
     overflow: auto;
 }
@@ -352,14 +349,11 @@ button .fa {
 fancy sharing button
 */
 
-.share-button{
+.share-button {
     position: absolute;
     height: 36px;
-    /*top:50%;*/
-    /*margin-top:-17px;*/
     width: 135px;
     left: 52%;
-    /*margin-left:-65px;*/
     background: #292c2f;
     border-radius: 2px;
     overflow: hidden;
@@ -368,7 +362,7 @@ fancy sharing button
     border: 1px solid #999999;
 }
 
-.lid{
+.lid {
     text-align:center;
     position:absolute;
     top:0;
@@ -385,7 +379,7 @@ fancy sharing button
     z-index: 4;
 }
 
-.open .lid{
+.open .lid {
     transform:rotateX(90deg);
 }
 
@@ -404,7 +398,7 @@ fancy sharing button
     top:0px;
 }
 
-.share-item{
+.share-item {
     display:block;
     background:#fff;
     margin-right: 10px;
@@ -419,17 +413,17 @@ fancy sharing button
     transition: 500ms ease all;
 }
 
-.share-item:hover{
+.share-item:hover {
     background:#fff;
     transition: 50ms ease all;
 }
 
-.share-item:active{
+.share-item:active {
     background:#ccc;
     transition: 50ms ease all;
 }
 
-.share-item:nth-child(1){
+.share-item:nth-child(1) {
     transform: translateX(200px) rotate(180deg);
 }
 
@@ -437,7 +431,7 @@ fancy sharing button
     transform: translateX(400px) rotate(200deg);
 }
 
-.open .share-item{
+.open .share-item {
     transform: translateX(0) rotate(0);
     margin-left:3px;
 }
@@ -452,7 +446,7 @@ fancy sharing button
     width: 200px;
 }
 
-.share-items-wrapper{
+.share-items-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -462,15 +456,15 @@ fancy sharing button
     margin-left:-133.5px;
 }
 
-.shared .share-item{
+.shared .share-item {
     transform :translateY(200px);
 }
 
-.shared .share-item:nth-child(1){
+.shared .share-item:nth-child(1) {
     transition: 500ms cubic-bezier(.32,-0.22,.9,.93) all;
 }
 
-.shared .share-item:nth-child(2){
+.shared .share-item:nth-child(2) {
     transition: 1000ms cubic-bezier(.32,-0.22,.9,.93) all;
 }
 
@@ -586,12 +580,12 @@ input[type=checkbox] {
     font-size: 20px;
 }
 
-.landing .fb{
+.landing .fb {
     border: 1px solid #3b5998;
     color: #3b5998;
 }
 
-.landing .twitter{
+.landing .twitter {
     border: 1px solid #4099FF;
     color: #4099FF;
 }

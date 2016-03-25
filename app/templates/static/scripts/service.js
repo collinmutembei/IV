@@ -1,4 +1,4 @@
-angular.module('pheditApp').factory('MainService', function($resource) {
+angular.module('pheditApp').factory('MainService', function ($resource) {
     return {
         all_images: $resource('/api/images/', {}, {
             getImages: {

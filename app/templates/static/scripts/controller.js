@@ -47,11 +47,11 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         if ($scope.original_image && $scope.applyeffects.length > 0) {
             MainService.image_effects.send_effects({'original_image_url': $scope.original_image, 'effects': $scope.applyeffects}).
             $promise.
-            then(function(result){
+            then(function (result) {
                 $scope.imageurl = result.phedited_image;
                 $scope.$emit('sharable_url');
             }).
-            catch(function(response){
+            catch(function (response) {
                 console.log("failed to apply effects");
             });
         } else {
@@ -60,17 +60,17 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         }
     });
 
-    $scope.$on('sharable_url', function(){
+    $scope.$on('sharable_url', function () {
         $scope.share_url = $scope.imageurl
     })
 
-    $scope.share_image = function(){
+    $scope.share_image = function () {
         FB.ui(
             {
                 method: 'feed',
                 link: $scope.share_url,
                 caption: '#phedited'
-            }, function(response){
+            }, function (response) {
             }
         );
     };

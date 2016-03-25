@@ -7,16 +7,16 @@ app.config(function($httpProvider) {
 
 });
 
-$(document).ready(function(){
-    $('.share-button').on('click',function(){
+$(document).ready(function () {
+    $('.share-button').on('click', function() {
         $(this).addClass('open');
     });
-    $( ".share-item" ).on('click',function(){
+    $( ".share-item" ).on('click', function () {
         $('.share-button').addClass('shared');
         setTimeout(function(){
             $('.share-button').addClass('thankyou');
         }, 800);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.share-button').removeClass('open');
             $('.share-button').removeClass('shared');
             $('.share-button').removeClass('thankyou');
