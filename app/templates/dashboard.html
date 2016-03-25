@@ -14,7 +14,7 @@
             {% else %}
                 <img class="img-circle pull-right " src="{% static 'images/profile.png' %}" />
             {% endif %}
-            <a href="/accounts/logout/" class="logout-btn btn btn-sm pull-right">logout</a>
+            <a href="/accounts/logout/" class="logout-btn btn btn-sm pull-right">Logout</a>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-2 col-md-offset-0">
             <div class="effects-workspace">
-                <span class="text-center col-md-12">effects</span>
+                <span class="text-center col-md-12">Effects</span>
                 <ul class="checkbox-grid">
                     <li><label for="effect1">blur</label><input type="checkbox" id="effect1" ng-model="effectsModel.BLUR" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
                     <li><label for="effect2">contour</label><input type="checkbox" id="effect2" ng-model="effectsModel.CONTOUR" ng-disabled="!(imageuploaded)" class="checkbox"/></li>
@@ -42,7 +42,7 @@
                     {% verbatim %}
                     <div id="button-wrapper" ng-hide="images.length">
                         <button ngf-select="upload($file)">
-                            <p>click to upload an image</p>
+                            <p>Upload an image</p>
                             <div class="fill"></div>
                             <div class="fa fa-check"></div>
                         </button>
