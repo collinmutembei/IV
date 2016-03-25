@@ -1,10 +1,10 @@
-from django.db import models
-from api.models.user import User
-import requests
 import io
 import os
-from PIL import Image, ImageFilter, ImageOps
+import requests
 from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.db import models
+from PIL import Image, ImageFilter, ImageOps
+from api.models.user import User
 
 
 def set_upload_file_path(instance, filename):

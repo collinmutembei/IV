@@ -1,3 +1,5 @@
+import re
+import uuid
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -5,8 +7,6 @@ from django.contrib.auth.models import (
 )
 from django.core import validators
 from django.db import models
-import uuid
-import re
 
 
 class UserManager(BaseUserManager):
