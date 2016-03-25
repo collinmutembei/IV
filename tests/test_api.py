@@ -4,10 +4,12 @@ import os
 
 
 class PheditAPITestCase(APITestCase):
-    """defines tests for the api"""
+    """defines tests for the api
+    """
 
     def setUp(self):
-        """initializes the test client and test users"""
+        """initializes the test client and test users
+        """
         self.client = APIClient()
         self.anonymous_user = User(username='anonymous')
         self.anonymous_user.set_password('dbfdu76&mHN')
@@ -17,7 +19,8 @@ class PheditAPITestCase(APITestCase):
         self.anonymous_user.save()
 
     def test_api_endpoint(self):
-        """test for api endpoint"""
+        """test for api endpoint
+        """
         response = self.client.get('/api/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
@@ -30,12 +33,14 @@ class PheditAPITestCase(APITestCase):
         )
 
     def test_api_users_endpoint(self):
-        """test for api users endpoint"""
+        """test for api users endpoint
+        """
         response = self.client.get('/api/users/')
         self.assertEqual(response.status_code, 200)
 
     def test_creating_api_user_endpoint(self):
-        """test for creating a new user"""
+        """test for creating a new user
+        """
         response = self.client.post(
             '/api/users/',
             {'username': 'anothertestuser', 'password': 'test'}
@@ -44,7 +49,8 @@ class PheditAPITestCase(APITestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_getting_api_user_endpoint(self):
-        """test for getting users"""
+        """test for getting users
+        """
         self.client.post(
             '/api/users/',
             {'username': 'anotheruser', 'password': 'test'}
@@ -57,12 +63,14 @@ class PheditAPITestCase(APITestCase):
         )
 
     def test_api_images_endpoint(self):
-        """test for getting images"""
+        """test for getting images
+        """
         response = self.client.get('/api/images/')
         self.assertEqual(response.status_code, 200)
 
     def test_uploading_image_to_images_api_endpoint_as_anonymous_user(self):
-        """test for creating a new image"""
+        """test for creating a new image
+        """
         path = os.path.dirname(os.path.abspath(__file__))
         with open(os.path.join(path, 'hashtag.jpg'), "rb") as image:
             response = self.client.post(
@@ -81,7 +89,8 @@ class PheditAPITestCase(APITestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_uploading_image_to_images_api_endpoint_as_other_user(self):
-        """test for creating a new image as logged-in user"""
+        """test for creating a new image as logged-in user
+        """
         self.client.login(
             username='testuser',
             password='ncvsN809ibkj!*HJ2612J'
@@ -107,7 +116,8 @@ class PheditAPITestCase(APITestCase):
         self.client.logout()
 
     def test_redirect_when_accessing_webapp_unauthenticated(self):
-        """user gets redirected if they navigate to app directly"""
+        """user gets redirected if they navigate to app directly
+        """
         unauthenticated_response = self.client.get('/app/')
         self.assertEqual(unauthenticated_response.status_code, 302)
         self.client.login(

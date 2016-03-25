@@ -5,7 +5,8 @@ from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """Serializer for user information"""
+    """Serializer for user information
+    """
 
     uuid = serializers.UUIDField(read_only=True, format='hex')
     password = serializers.CharField(
@@ -22,7 +23,8 @@ class UserSerializer(serializers.ModelSerializer):
         }
 
     def create(self, validated_data):
-        """creates a user"""
+        """creates a user
+        """
 
         user = User(
             username=validated_data['username'].lower()
@@ -33,7 +35,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ImageSerializer(serializers.ModelSerializer):
-    """Serializer for images"""
+    """Serializer for images
+    """
 
     image = serializers.ImageField(use_url=True)
     uploaded_by = serializers.ReadOnlyField(source='uploaded_by.username')
@@ -44,7 +47,8 @@ class ImageSerializer(serializers.ModelSerializer):
 
 
 class PheditedImageSerializer(serializers.ModelSerializer):
-    """Serializer for phedited images"""
+    """Serializer for phedited images
+    """
 
     original_image = serializers.URLField(
         allow_blank=False,

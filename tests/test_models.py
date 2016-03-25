@@ -5,9 +5,11 @@ from PIL import Image
 
 
 class ModelsTestCase(TestCase):
-    """define tests for models"""
+    """define tests for models
+    """
     def setUp(self):
-        """initializes data to be used in testing"""
+        """initializes data to be used in testing
+        """
         self.TEST_DIR = os.path.dirname(os.path.abspath(__file__))
         self.image_filename = [file for file in os.listdir(self.TEST_DIR) if file.endswith('jpg')][0]
         self.user = user.User(username="uploader", password="sdHRjku453485643")
@@ -17,7 +19,8 @@ class ModelsTestCase(TestCase):
         self.anonymous_user.save()
 
     def test_upload_path(self):
-        """test for the directory where uploaded image is saved"""
+        """test for the directory where uploaded image is saved
+        """
         # for anonymous user
         self.image_being_edited = phedited.PheditedImage(phedited_by=self.anonymous_user)
         self.image_being_edited.effects = ['BLUR']
@@ -32,7 +35,8 @@ class ModelsTestCase(TestCase):
         self.assertEqual(user_upload_path, '{0}/phedited/BLUR_hashtag.jpg'.format(user_hex))
 
     def test_apply_effect(self):
-        """test applying effect on image"""
+        """test applying effect on image
+        """
         self.image_before = Image.open(self.TEST_DIR + '/' + self.image_filename)
         self.effects = ['HULK']
         self.image_after = phedited.apply_effects(self.image_before, self.effects)
@@ -41,7 +45,8 @@ class ModelsTestCase(TestCase):
         self.assertNotEqual(self.image_before_pixel, self.image_after_pixel)
 
     def test_user_creation(self):
-        """test creating a normal user and superuser"""
+        """test creating a normal user and superuser
+        """
         # normal user
         self.another_user = user.User.objects.create_user(
             username="dj-khaled",

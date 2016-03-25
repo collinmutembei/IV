@@ -10,14 +10,16 @@ from rest_framework import viewsets
 
 
 class UserViewset(viewsets.ModelViewSet):
-    """Serializer for the user model"""
+    """Serializer for the user model
+    """
     queryset = User.objects.all()
     serializer_class = UserSerializer
     lookup_field = ('username')
 
 
 class ImageViewset(viewsets.ModelViewSet):
-    """Serializer for the image model"""
+    """Serializer for the image model
+    """
     queryset = Image.objects.all()
     serializer_class = ImageSerializer
 
@@ -35,7 +37,8 @@ class ImageViewset(viewsets.ModelViewSet):
 
 
 class PheditedImageViewset(viewsets.ModelViewSet):
-    """Serializer for phedited image(s) model"""
+    """Serializer for phedited image(s) model
+    """
     queryset = PheditedImage.objects.all()
     serializer_class = PheditedImageSerializer
 

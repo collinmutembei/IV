@@ -10,7 +10,8 @@ import re
 
 
 class UserManager(BaseUserManager):
-    """Manager class for the custom user model."""
+    """Manager class for the custom user model.
+    """
 
     class Meta:
         app_label = 'api'
@@ -20,7 +21,8 @@ class UserManager(BaseUserManager):
         username,
         password=None,
     ):
-        """Override the default create_user() method."""
+        """Override the default create_user() method.
+        """
 
         account = self.model(username=username)
         account.set_password(password)
@@ -32,7 +34,8 @@ class UserManager(BaseUserManager):
         username,
         password=None,
     ):
-        """Override the default create_superuser() method."""
+        """Override the default create_superuser() method.
+        """
 
         account = self.create_user(username, password)
         account.is_superuser = True
@@ -41,7 +44,8 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    """Model defining the user"""
+    """Model defining the user
+    """
 
     class Meta:
         app_label = 'api'
@@ -69,5 +73,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     def get_short_name(self):
-        """returns username"""
+        """returns username
+        """
         return self.username
