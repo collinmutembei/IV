@@ -99,4 +99,13 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         $scope.loading = false;
     });
 
+    MainService.image_effects.get_effects().
+    $promise.
+    then(function(result){
+        $scope.gallery = result
+    }).
+    catch(function(response){
+        console.log("failed to fetch images");
+    });
+
 }]);

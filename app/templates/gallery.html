@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% verbatim %}
+<div class="container">
+  <div class="row">
+    <h1 class="gallery">Gallery</h1>
+    <div class="row" ng-repeat="image in gallery | orderBy: '-created_at'">
+      <div class="col-lg-3 col-sm-4 col-xs-6"><a title="{{image.id}}" href="#"><img class="thumbnail img-responsive" ng-src="{{image.phedited_image}}" alt="{{image.id}}"></a></div>
+    </div>
+  </div>
+</div>
+{% endverbatim %}
+
+{% endblock %}

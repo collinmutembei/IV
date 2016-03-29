@@ -16,3 +16,11 @@ def dashboard(request):
     if request.user.is_authenticated():
         return render(request, 'dashboard.html')
     return HttpResponseRedirect("/")
+
+
+def gallery(request):
+    """renders the gallery for all images
+    """
+    if request.user.is_authenticated():
+        return render(request, 'gallery.html')
+    return HttpResponseRedirect("/")

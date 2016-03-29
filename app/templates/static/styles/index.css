@@ -601,12 +601,6 @@ input[type=checkbox] {
     margin-right: 2px;
 }
 
-/*.logout-btn {
-    border: 1px solid #292c2f;;
-    margin-right: 10px;
-    margin-top: 22px;
-    color: #000;
-}*/
 
 .clearcanvas .btn {
     height: 36px;
@@ -633,4 +627,8 @@ input[type=checkbox] {
 @keyframes spin {
     from { transform: scale(1) rotate(0deg);}
     to { transform: scale(1) rotate(360deg);}
+}
+
+.gallery {
+    color: #000;
 }
