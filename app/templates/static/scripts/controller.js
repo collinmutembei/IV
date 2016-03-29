@@ -1,14 +1,19 @@
 angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainService', function ($scope, Upload, MainService) {
 
     $scope.imageuploaded = false;
+    $scope.loading = false;
+    $scope.hide_upload_btn = false;
 
     $scope.upload = function (file) {
+        $scope.hide_upload_btn = true;
+        $scope.$emit('startworking');
         Upload.upload({
             url: '/api/images/',
             data: {'image': file}
         }).then(function (response) {
             $scope.imageuploaded = true;
             $scope.$emit('uploadComplete');
+            $scope.$emit('finishworking');
             console.log('photo uploaded successfully');
         }, function (error) {
             console.log('photo uploaded error: ' + error.status);
@@ -36,6 +41,7 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         angular.forEach($scope.effectsModel, function (value, key) {
             if (value) {
                 $scope.applyeffects.push(key);
+                $scope.$emit('startworking');
             }
         });
         $scope.$emit('addeffect');
@@ -48,6 +54,7 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             then(function (result) {
                 $scope.imageurl = result.phedited_image;
                 $scope.$emit('sharable_url');
+                $scope.$emit('finishworking');
             }).
             catch(function (response) {
                 console.log("failed to apply effects");
@@ -81,5 +88,15 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         $scope.imageurl = ""
         $scope.share_url = ""
         $scope.imageuploaded = false;
+        $scope.hide_upload_btn = false;
     });
+
+    $scope.$on('startworking', function () {
+        $scope.loading = true;
+    });
+
+    $scope.$on('finishworking', function () {
+        $scope.loading = false;
+    });
+
 }]);

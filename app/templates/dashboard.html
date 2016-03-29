@@ -40,9 +40,12 @@
             <div class="panel panel-default" ng-class="imageurl ? 'workspace' : 'fixed-workspace'">
                 <div class="panel-body">
                     {% verbatim %}
-                    <div id="button-wrapper" ng-hide="imageurl">
-                        <button ngf-select="upload($file)" ngf-pattern="'image/*'" ngf-accept="'image/*'">
+                    <div id="button-wrapper">
+                        <button ngf-select="upload($file)" ngf-pattern="'image/*'" ngf-accept="'image/*'" ng-hide="hide_upload_btn">
                             <p>Upload an image</p>
+                        </button>
+                        <button type="button" ng-hide="!loading">
+                            <p><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading ...</p>
                         </button>
                     </div>
                     {% endverbatim %}
