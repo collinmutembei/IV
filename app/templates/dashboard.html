@@ -9,12 +9,21 @@
             <a href="#"><img src="{% static 'images/phedit.gif' %}" alt="logo" class="brand-logo"/></a>
         </div>
         <div class="col-xs-6 col-md-6">
-            {% if user.is_authenticated and user.socialaccount_set.all.0.get_avatar_url %}
-                <img class="img-circle pull-right " src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
-            {% else %}
-                <img class="img-circle pull-right " src="{% static 'images/profile.png' %}" />
-            {% endif %}
-            <a href="/accounts/logout/" class="logout-btn btn btn-sm pull-right">Logout</a>
+            <li class="dropdown pull-right">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    {% if user.is_authenticated and user.socialaccount_set.all.0.get_avatar_url %}
+                        <img class="img-circle" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+                        <b class="caret"></b>
+                    {% else %}
+                        <img class="img-circle pull-right " src="{% static 'images/profile.png' %}" />
+                    {% endif %}
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dec small">Gallery</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/accounts/logout/" class="dec small">Logout</a></li>
+                </ul>
+            </li>
         </div>
     </div>
 </div>
