@@ -24,3 +24,6 @@ $(document).ready(function () {
     });
 
 });
+
+toastr.options.preventDuplicates = true;
+toastr.options.positionClass = 'toast-bottom-right';

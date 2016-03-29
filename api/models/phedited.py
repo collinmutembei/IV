@@ -90,3 +90,8 @@ class PheditedImage(models.Model):
             save=False,
         )
         super(PheditedImage, self).save(*args, **kwargs)
+
+
+class FinalImage(models.Model):
+    """define final image url"""
+    saved_image = models.URLField()

@@ -22,6 +22,9 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
     };
 
     $scope.$on('uploadComplete', function () {
+        Mousetrap.bind('s', function() {
+
+        });
         MainService.all_images.getImages().
         $promise.
         then(function(result){
@@ -99,7 +102,22 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
         $scope.loading = false;
     });
 
-    MainService.image_effects.get_effects().
+    $scope.save_image = function () {
+        $scope.$emit('save');
+    }
+
+    $scope.$on('save', function () {
+        MainService.saved_images.save({"saved_image": $scope.share_url}).
+        $promise.
+        then(function(result){
+            toastr.info('Image saved successfully')
+        }).
+        catch(function(response){
+            console.log("failed to save image");
+        });
+    });
+
+    MainService.saved_images.get_saved().
     $promise.
     then(function(result){
         $scope.gallery = result

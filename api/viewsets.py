@@ -1,12 +1,13 @@
+from rest_framework import viewsets
 from api.models.user import User
 from api.models.image import Image
-from api.models.phedited import PheditedImage
+from api.models.phedited import PheditedImage, FinalImage
 from api.serializers import (
     UserSerializer,
     ImageSerializer,
-    PheditedImageSerializer
+    PheditedImageSerializer,
+    FinalImageSerializer
 )
-from rest_framework import viewsets
 
 
 class UserViewset(viewsets.ModelViewSet):
@@ -51,3 +52,10 @@ class PheditedImageViewset(viewsets.ModelViewSet):
             phedited_by=self.request.user,
             effects=self.request.data.get('effects')
         )
+
+
+class FinalImageViewset(viewsets.ModelViewSet):
+    """Serializer for final image(s) model
+    """
+    queryset = FinalImage.objects.all()
+    serializer_class = FinalImageSerializer

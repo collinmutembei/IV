@@ -1,7 +1,7 @@
+from rest_framework import serializers
 from api.models.user import User
 from api.models.image import Image
-from api.models.phedited import PheditedImage
-from rest_framework import serializers
+from api.models.phedited import PheditedImage, FinalImage
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -67,3 +67,16 @@ class PheditedImageSerializer(serializers.ModelSerializer):
             'phedited_at',
             'effects'
         )
+
+
+class FinalImageSerializer(serializers.ModelSerializer):
+    """Serializer for saved images
+    """
+
+    saved_image = serializers.URLField(
+        allow_blank=False,
+    )
+
+    class Meta:
+        model = FinalImage
+        fields = ('id', 'saved_image',)

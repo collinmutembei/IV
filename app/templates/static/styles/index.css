@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background: url(../images/bgpattern.png) repeat center center fixed;
+    background: url(../img/bgpattern.png) repeat center center fixed;
     color: #fff;
 }
 
@@ -363,7 +363,7 @@ fancy sharing button
     position: absolute;
     height: 36px;
     width: 135px;
-    left: 76%;
+    left: 57%;
     background: #292c2f;
     border-radius: 2px;
     overflow: hidden;
@@ -524,7 +524,7 @@ input[type=checkbox] {
     z-index: 1;
     width: 1rem;
     height: 1rem;
-    border: 2px solid #f2f2f2;
+    border: 2px solid #aaa;
 }
 
 .checkbox:checked:before {
@@ -611,7 +611,7 @@ input[type=checkbox] {
     color: #000;
     font-weight: bold;
     z-index: 4;
-    left: 33%
+    margin-left: -15px;
 }
 
 .glyphicon-refresh-animate {
@@ -631,4 +631,27 @@ input[type=checkbox] {
 
 .gallery {
     color: #000;
+}
+
+.collage img{
+    max-height: 75px;
+    margin-bottom: 10px;
+}
+
+.save-btn .btn{
+    height: 36px;
+    width: 135px;
+    background: #fff;
+    border-radius:2px;
+    border: 1px solid #999999;
+    color: #000;
+    font-weight: bold;
+    z-index: 4;
+    left: 27%;
+}
+
+.toast-top-center {
+    top: 12px;
+    left: 50%;
+    margin-left: -150px;
 }

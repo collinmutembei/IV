@@ -18,6 +18,17 @@ angular.module('pheditApp').factory('MainService', function ($resource) {
             }
         }, {
             stripTrailingSlashes: false
+        }),
+        saved_images: $resource('/api/saved/', {}, {
+            save: {
+                method: 'POST'
+            },
+            get_saved: {
+                method: 'GET',
+                isArray: true
+            }
+        }, {
+            stripTrailingSlashes: false
         })
     };
 });

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header col-xs-6 col-md-6">
+            <a href="/" target="_self"><img src="{% static 'img/phedit.gif' %}" alt="logo" class="brand-logo"/></a>
+        </div>
+        <div class="col-xs-6 col-md-6">
+            <li class="dropdown pull-right">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    {% if user.is_authenticated and user.socialaccount_set.all.0.get_avatar_url %}
+                        <img class="img-circle" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+                        <b class="caret"></b>
+                    {% else %}
+                        <img class="img-circle pull-right " src="{% static 'img/profile.png' %}" />
+                    {% endif %}
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/gallery" class="dec small" target="_self">Gallery</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/accounts/logout/" class="dec small">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+</div>
