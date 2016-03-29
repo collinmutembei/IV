@@ -347,22 +347,18 @@ fancy sharing button
     position: absolute;
     height: 36px;
     width: 135px;
-    left: 52%;
+    left: 76%;
     background: #292c2f;
     border-radius: 2px;
     overflow: hidden;
     line-height: 36px;
-    user-select: none;
     border: 1px solid #999999;
 }
 
 .lid {
     text-align:center;
     position:absolute;
-    top:0;
-    left:0;
     width:100%;
-    height:100%;
     background:#fff;
     border-radius:2px;
     color:#000;
@@ -594,4 +590,16 @@ input[type=checkbox] {
     margin-right: 10px;
     margin-top: 22px;
     color: #000;
+}
+
+.clearcanvas .btn {
+    height: 36px;
+    width: 135px;
+    background: #fff;
+    border-radius:2px;
+    border: 1px solid #999999;
+    color: #000;
+    font-weight: bold;
+    z-index: 4;
+    left: 33%
 }

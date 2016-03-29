@@ -7,9 +7,6 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             url: '/api/images/',
             data: {'image': file}
         }).then(function (response) {
-            var $button = $("button");
-            $button.parent().addClass("clicked").delay(2000).queue(function(){
-            });
             $scope.imageuploaded = true;
             $scope.$emit('uploadComplete');
             console.log('photo uploaded successfully');
@@ -27,6 +24,7 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             $scope.images = result
             $scope.original_image = result[result.length - 1].image
             $scope.imageurl = $scope.original_image
+            $scope.$emit('sharable_url');
         }).
         catch(function(response){
             console.log("failed to fetch images");
@@ -74,4 +72,14 @@ angular.module('pheditApp').controller('MyCtrl', ['$scope', 'Upload', 'MainServi
             }
         );
     };
+
+    $scope.clear_canvas = function() {
+        $scope.$emit('canvascleared');
+    }
+
+    $scope.$on('canvascleared', function () {
+        $scope.imageurl = ""
+        $scope.share_url = ""
+        $scope.imageuploaded = false;
+    });
 }]);
