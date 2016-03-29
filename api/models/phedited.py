@@ -14,13 +14,6 @@ def set_upload_file_path(instance, filename):
     instance.effects.append('')
     effects = "_".join(instance.effects)
     # all edited images are stored in the directory phedited
-    if user.username == "anonymous":
-        file_path = "{0}/phedited/{1}{2}".format(
-            'anonymous',
-            effects,
-            filename
-        )
-        return file_path
     random_hex = user.uuid.hex
     file_path = "{0}/phedited/{1}{2}".format(
         random_hex[-20:],

@@ -21,11 +21,6 @@ class ModelsTestCase(TestCase):
     def test_upload_path(self):
         """test for the directory where uploaded image is saved
         """
-        # for anonymous user
-        self.image_being_edited = phedited.PheditedImage(phedited_by=self.anonymous_user)
-        self.image_being_edited.effects = ['BLUR']
-        anon_upload_path = phedited.set_upload_file_path(self.image_being_edited, self.image_filename)
-        self.assertEqual(anon_upload_path, 'anonymous/phedited/BLUR_hashtag.jpg')
 
         # for logged in user
         self.image_being_edited = phedited.PheditedImage(phedited_by=self.user)

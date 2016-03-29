@@ -126,3 +126,11 @@ class PheditAPITestCase(APITestCase):
         )
         authenticated_response = self.client.get('/app/')
         self.assertEqual(authenticated_response.status_code, 200)
+
+    def test_accessing_navigating_to_gallery_page(self):
+        self.client.login(
+            username='testuser',
+            password='ncvsN809ibkj!*HJ2612J'
+        )
+        response = self.client.get('/gallery/')
+        self.assertContains(response, 'Gallery')
