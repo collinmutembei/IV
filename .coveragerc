@@ -1,0 +1,10 @@
+[report]
+omit =
+    *virtualenv*
+    *envs*
+    *migrations/*
+    */python?.?/*
+    *__init__*
+    */tests/*
+    *manage.py
+    *settings.py

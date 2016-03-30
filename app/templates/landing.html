@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+{% load socialaccount %}
+<div class="landing">
+    <img src="{% static 'img/phedit.gif' %}" alt="logo">
+    <div class="row">
+        <h1>PHEDIT</h1>
+        <p>A modern photo-editing application</p>
+        <div class="login-btn">
+            <a href='{% provider_login_url "facebook" method="oauth2" %}' class="btn fb"><i class="fa fa-facebook"></i> login with facebook</a>
+            or
+            <a href='{% provider_login_url "twitter" %}' class="btn twitter"><i class="fa fa-twitter"></i> login with twitter</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
