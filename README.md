@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/andela-cmutembei/IV.svg?branch=develop)](https://travis-ci.org/andela-cmutembei/IV)
+[![Build Status](https://travis-ci.org/collinmutembei/IV.svg?branch=master)](https://travis-ci.org/collinmutembei/IV)
 [![Coverage Status](https://coveralls.io/repos/andela-cmutembei/IV/badge.svg?branch=develop)](https://coveralls.io/github/andela-cmutembei/IV?branch=develop)
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/9e68169eaae44b4ea781295f597949dd/snapshot/origin:develop:HEAD/badge.svg)](https://www.quantifiedcode.com/app/project/9e68169eaae44b4ea781295f597949dd)
 
@@ -21,7 +21,7 @@ To setup Phedit locally follow the following instructions:
 
 1 . Clone the repo and navigate to the project directory
 ```shell
-$ git clone https://github.com/andela-cmutembei/IV.git && cd IV
+$ git clone https://github.com/collinmutembei/IV.git && cd IV
 ```
 
 
