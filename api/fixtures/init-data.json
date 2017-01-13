@@ -75,8 +75,8 @@
         "model": "contenttypes.contenttype",
         "pk": 10,
         "fields": {
-            "app_label": "account",
-            "model": "emailaddress"
+            "app_label": "api",
+            "model": "finalimage"
         }
     },
     {
@@ -84,15 +84,15 @@
         "pk": 11,
         "fields": {
             "app_label": "account",
-            "model": "emailconfirmation"
+            "model": "emailaddress"
         }
     },
     {
         "model": "contenttypes.contenttype",
         "pk": 12,
         "fields": {
-            "app_label": "socialaccount",
-            "model": "socialapp"
+            "app_label": "account",
+            "model": "emailconfirmation"
         }
     },
     {
@@ -100,7 +100,7 @@
         "pk": 13,
         "fields": {
             "app_label": "socialaccount",
-            "model": "socialaccount"
+            "model": "socialapp"
         }
     },
     {
@@ -108,23 +108,23 @@
         "pk": 14,
         "fields": {
             "app_label": "socialaccount",
+            "model": "socialaccount"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "socialaccount",
             "model": "socialtoken"
         }
     },
     {
         "model": "sessions.session",
-        "pk": "s2bgi7np5d297bj7t436s2vpd5mczqhm",
+        "pk": "43rpvj3gwg1stj3zrgfp7t5fauaf01zt",
         "fields": {
-            "session_data": "YjY2MDc0ZWI2OGRmMGU0MDJlYWRiMDk5NzhjNWRhN2I3MTA5ZGI3MTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNzBhZDYwYzVkNTgwNzY0NmUwMTI2YTFjY2Y5ZTVjYzBmNzRjODMwIn0=",
-            "expire_date": "2016-03-25T12:53:10.196Z"
-        }
-    },
-    {
-        "model": "sessions.session",
-        "pk": "t8cn7wfygjvue5yl7i53gnzmhhyl2mzg",
-        "fields": {
-            "session_data": "MTkzN2U2YmM3OTMxNDg2OTk5YmJhNTIyMDQzNWFhY2IwOGY0NzEyMDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiMDcwYWQ2MGM1ZDU4MDc2NDZlMDEyNmExY2NmOWU1Y2MwZjc0YzgzMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
-            "expire_date": "2016-03-22T19:58:47.509Z"
+            "session_data": "ZTFiNDMxMjc5YmM4YThiNzA3MzQwNzQ1NTRmYWQ3ZjNjMTU0MDUwYjp7Im9hdXRoX2FwaS50d2l0dGVyLmNvbV9yZXF1ZXN0X3Rva2VuIjp7Im9hdXRoX3Rva2VuIjoiYm9xN1lnQUFBQUFBdDBYMUFBQUJXWmRmQjd3Iiwib2F1dGhfdG9rZW5fc2VjcmV0IjoiVmVZTmpaYzdZcmpOSW1kM3JtMHUyeG5NSlpuTHFqdU0iLCJvYXV0aF9jYWxsYmFja19jb25maXJtZWQiOiJ0cnVlIn0sIm9hdXRoX2FwaS50d2l0dGVyLmNvbV9hY2Nlc3NfdG9rZW4iOnsib2F1dGhfdG9rZW4iOiIyMTY2NDAyNTAwLU1hUzhyRnR5UFlQVGQ3blR6SUR3TjVTcmpmZGFUODN6MHZCV0tUayIsIm9hdXRoX3Rva2VuX3NlY3JldCI6IlRYb2NKS05abXVyVXVkMFJ2a25nM3lxV0lpN3laZXRIVkdybEFjR1hqaG1MRSIsInVzZXJfaWQiOiIyMTY2NDAyNTAwIiwic2NyZWVuX25hbWUiOiJDb2xsaW5NdXRlbWJlaSIsInhfYXV0aF9leHBpcmVzIjoiMCJ9LCJfYXV0aF91c2VyX2lkIjoiMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFsbGF1dGguYWNjb3VudC5hdXRoX2JhY2tlbmRzLkF1dGhlbnRpY2F0aW9uQmFja2VuZCIsIl9hdXRoX3VzZXJfaGFzaCI6ImY3MTc5OTAyYWI2NDZkNzBmNDgzMDZkNDVhZjM0MTEyNTU5YzZiMTAifQ==",
+            "expire_date": "2017-01-27T10:28:28.619Z"
         }
     },
     {
@@ -133,6 +133,20 @@
         "fields": {
             "domain": "localhost:8000",
             "name": "phedit-local"
+        }
+    },
+    {
+        "model": "api.finalimage",
+        "pk": 1,
+        "fields": {
+            "saved_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_HULK_EMBOSS_cool-shapes.jpg"
+        }
+    },
+    {
+        "model": "api.finalimage",
+        "pk": 2,
+        "fields": {
+            "saved_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_BLUR_yoda.jpg"
         }
     },
     {
@@ -175,6 +189,17 @@
             "sites": [
                 1
             ]
+        }
+    },
+    {
+        "model": "socialaccount.socialtoken",
+        "pk": 1,
+        "fields": {
+            "app": 1,
+            "account": 1,
+            "token": "2166402500-MaS8rFtyPYPTd7nTzIDwN5SrjfdaT83z0vBWKTk",
+            "token_secret": "TXocJKNZmurUud0Rvkng3yqWIi7yZetHVGrlAcGXjhmLE",
+            "expires_at": null
         }
     },
     {
@@ -424,134 +449,161 @@
         "model": "auth.permission",
         "pk": 28,
         "fields": {
-            "name": "Can add email address",
+            "name": "Can add final image",
             "content_type": 10,
-            "codename": "add_emailaddress"
+            "codename": "add_finalimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 29,
         "fields": {
-            "name": "Can change email address",
+            "name": "Can change final image",
             "content_type": 10,
-            "codename": "change_emailaddress"
+            "codename": "change_finalimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 30,
         "fields": {
-            "name": "Can delete email address",
+            "name": "Can delete final image",
             "content_type": 10,
-            "codename": "delete_emailaddress"
+            "codename": "delete_finalimage"
         }
     },
     {
         "model": "auth.permission",
         "pk": 31,
         "fields": {
-            "name": "Can add email confirmation",
+            "name": "Can add email address",
             "content_type": 11,
-            "codename": "add_emailconfirmation"
+            "codename": "add_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 32,
         "fields": {
-            "name": "Can change email confirmation",
+            "name": "Can change email address",
             "content_type": 11,
-            "codename": "change_emailconfirmation"
+            "codename": "change_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 33,
         "fields": {
-            "name": "Can delete email confirmation",
+            "name": "Can delete email address",
             "content_type": 11,
-            "codename": "delete_emailconfirmation"
+            "codename": "delete_emailaddress"
         }
     },
     {
         "model": "auth.permission",
         "pk": 34,
         "fields": {
-            "name": "Can add social application",
+            "name": "Can add email confirmation",
             "content_type": 12,
-            "codename": "add_socialapp"
+            "codename": "add_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 35,
         "fields": {
-            "name": "Can change social application",
+            "name": "Can change email confirmation",
             "content_type": 12,
-            "codename": "change_socialapp"
+            "codename": "change_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 36,
         "fields": {
-            "name": "Can delete social application",
+            "name": "Can delete email confirmation",
             "content_type": 12,
-            "codename": "delete_socialapp"
+            "codename": "delete_emailconfirmation"
         }
     },
     {
         "model": "auth.permission",
         "pk": 37,
         "fields": {
-            "name": "Can add social account",
+            "name": "Can add social application",
             "content_type": 13,
-            "codename": "add_socialaccount"
+            "codename": "add_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 38,
         "fields": {
-            "name": "Can change social account",
+            "name": "Can change social application",
             "content_type": 13,
-            "codename": "change_socialaccount"
+            "codename": "change_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 39,
         "fields": {
-            "name": "Can delete social account",
+            "name": "Can delete social application",
             "content_type": 13,
-            "codename": "delete_socialaccount"
+            "codename": "delete_socialapp"
         }
     },
     {
         "model": "auth.permission",
         "pk": 40,
         "fields": {
-            "name": "Can add social application token",
+            "name": "Can add social account",
             "content_type": 14,
-            "codename": "add_socialtoken"
+            "codename": "add_socialaccount"
         }
     },
     {
         "model": "auth.permission",
         "pk": 41,
         "fields": {
-            "name": "Can change social application token",
+            "name": "Can change social account",
             "content_type": 14,
-            "codename": "change_socialtoken"
+            "codename": "change_socialaccount"
         }
     },
     {
         "model": "auth.permission",
         "pk": 42,
         "fields": {
-            "name": "Can delete social application token",
+            "name": "Can delete social account",
             "content_type": 14,
+            "codename": "delete_socialaccount"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can add social application token",
+            "content_type": 15,
+            "codename": "add_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can change social application token",
+            "content_type": 15,
+            "codename": "change_socialtoken"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can delete social application token",
+            "content_type": 15,
             "codename": "delete_socialtoken"
         }
     },
@@ -559,14 +611,14 @@
         "model": "api.user",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$24000$mPvpaLwPEQUQ$L14SnwmHIsgHr4mWwWH/+F4ItZDI53EANEvL5rRf12w=",
-            "last_login": null,
-            "is_superuser": false,
-            "uuid": "82e4c5d0-4a8e-4d6a-b436-2c50b24089d1",
-            "username": "anonymous",
+            "password": "pbkdf2_sha256$24000$FYnJQC5C2yeX$aiTzc3xoQIBNqKQgaWRz0I9EbjTcSfjingr+OrgkNiM=",
+            "last_login": "2017-01-13T09:57:25.893Z",
+            "is_superuser": true,
+            "uuid": "cdce5d02-1558-403f-ab15-a12fec53e15f",
+            "username": "admin",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2016-03-08T19:57:24.611Z",
+            "date_joined": "2017-01-13T09:56:51.459Z",
             "groups": [],
             "user_permissions": []
         }
@@ -575,24 +627,226 @@
         "model": "api.user",
         "pk": 2,
         "fields": {
-            "password": "pbkdf2_sha256$24000$Iq7jagH5KhYa$h5UbXUBPmk/rv/aFkefbdLWv4rmcC9rmgVagTqARKzw=",
-            "last_login": "2016-03-11T12:53:10.194Z",
-            "is_superuser": true,
-            "uuid": "cae36871-71a3-42ab-bdf6-601297e9b8d3",
-            "username": "admin",
+            "password": "pbkdf2_sha256$24000$DU7t269CyCiq$QzKs+I/ie5FzHuyWzZmc9eURF6vswnqnQQ9mBNT5CMY=",
+            "last_login": null,
+            "is_superuser": false,
+            "uuid": "89e01695-e513-495b-9d0b-ab9898327be3",
+            "username": "anonymous",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2016-03-08T19:57:49.075Z",
+            "date_joined": "2017-01-13T09:58:39.471Z",
             "groups": [],
             "user_permissions": []
+        }
+    },
+    {
+        "model": "api.user",
+        "pk": 3,
+        "fields": {
+            "password": "!rm9opJVfFANc3YC2E3jgv1vMWBxIwGy64kzaNTey",
+            "last_login": "2017-01-13T10:28:28.614Z",
+            "is_superuser": false,
+            "uuid": "eed625e2-55c7-4049-a498-8b350dc648ab",
+            "username": "CollinMutembei",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2017-01-13T10:28:03.685Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.image",
+        "pk": 1,
+        "fields": {
+            "image": "4049a4988b350dc648ab/avatar_-_blue.png",
+            "uploaded_by": "CollinMutembei",
+            "created_at": "2017-01-13T10:28:47.554Z",
+            "updated_at": "2017-01-13T10:28:47.554Z"
+        }
+    },
+    {
+        "model": "api.image",
+        "pk": 2,
+        "fields": {
+            "image": "4049a4988b350dc648ab/cool-shapes.jpg",
+            "uploaded_by": "CollinMutembei",
+            "created_at": "2017-01-13T10:29:34.784Z",
+            "updated_at": "2017-01-13T10:29:34.784Z"
+        }
+    },
+    {
+        "model": "api.image",
+        "pk": 3,
+        "fields": {
+            "image": "4049a4988b350dc648ab/wtf.jpg",
+            "uploaded_by": "CollinMutembei",
+            "created_at": "2017-01-13T10:31:47.678Z",
+            "updated_at": "2017-01-13T10:31:47.678Z"
+        }
+    },
+    {
+        "model": "api.image",
+        "pk": 4,
+        "fields": {
+            "image": "4049a4988b350dc648ab/yoda.jpg",
+            "uploaded_by": "CollinMutembei",
+            "created_at": "2017-01-13T10:32:18.240Z",
+            "updated_at": "2017-01-13T10:32:18.240Z"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 1,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/cool-shapes.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_cool-shapes.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:29:37.410Z",
+            "effects": "['MIRROR', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 2,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/cool-shapes.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_cool-shapes.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:30:56.709Z",
+            "effects": "['MIRROR', 'GREYSCALE', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 3,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/cool-shapes.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_HULK_cool-shapes.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:30:59.700Z",
+            "effects": "['MIRROR', 'GREYSCALE', 'HULK', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 4,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/cool-shapes.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_HULK_EMBOSS_cool-shapes.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:31:01.650Z",
+            "effects": "['MIRROR', 'GREYSCALE', 'HULK', 'EMBOSS', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 5,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_yoda.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:30.148Z",
+            "effects": "['MIRROR', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 6,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_yoda.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:35.035Z",
+            "effects": "['MIRROR', 'GREYSCALE', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 7,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_EMBOSS_yoda.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:37.323Z",
+            "effects": "['MIRROR', 'GREYSCALE', 'EMBOSS', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 8,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_yoda_6KP1ZD5.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:38.583Z",
+            "effects": "['MIRROR', 'GREYSCALE', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 9,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_CONTOUR_yoda.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:40.938Z",
+            "effects": "['MIRROR', 'GREYSCALE', 'CONTOUR', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 10,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_yoda_JqFOSBg.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:41.789Z",
+            "effects": "['MIRROR', 'GREYSCALE', '']"
+        }
+    },
+    {
+        "model": "api.pheditedimage",
+        "pk": 11,
+        "fields": {
+            "original_image": "http://coll.in:8000/uploads/4049a4988b350dc648ab/yoda.jpg",
+            "phedited_image": "4049a4988b350dc648ab/phedited/MIRROR_GREYSCALE_BLUR_yoda.jpg",
+            "phedited_by": "CollinMutembei",
+            "phedited_at": "2017-01-13T10:32:42.942Z",
+            "effects": "['MIRROR', 'GREYSCALE', 'BLUR', '']"
+        }
+    },
+    {
+        "model": "socialaccount.socialaccount",
+        "pk": 1,
+        "fields": {
+            "user": 3,
+            "provider": "twitter",
+            "uid": "2166402500",
+            "last_login": "2017-01-13T10:28:28.599Z",
+            "date_joined": "2017-01-13T10:28:03.687Z",
+            "extra_data": "{\"id\": 2166402500, \"id_str\": \"2166402500\", \"name\": \"Collinth\\u0113N\", \"screen_name\": \"CollinMutembei\", \"location\": \"Planet Earth\", \"description\": \"&phi;  &#x2248; 1.61803398874989484820\", \"url\": null, \"entities\": {\"description\": {\"urls\": []}}, \"protected\": false, \"followers_count\": 151, \"friends_count\": 342, \"listed_count\": 9, \"created_at\": \"Thu Oct 31 10:23:51 +0000 2013\", \"favourites_count\": 61, \"utc_offset\": 10800, \"time_zone\": \"Africa/Nairobi\", \"geo_enabled\": true, \"verified\": false, \"statuses_count\": 500, \"lang\": \"en\", \"status\": {\"created_at\": \"Tue Jan 10 20:26:19 +0000 2017\", \"id\": 818916906560356354, \"id_str\": \"818916906560356354\", \"text\": \"RT @DariusForoux: \\u201cIt\\u2019s not bragging if you can back it up.\\u201d - Muhammad Ali\", \"truncated\": false, \"entities\": {\"hashtags\": [], \"symbols\": [], \"user_mentions\": [{\"screen_name\": \"DariusForoux\", \"name\": \"Darius Foroux\", \"id\": 3673967055, \"id_str\": \"3673967055\", \"indices\": [3, 16]}], \"urls\": []}, \"source\": \"<a href=\\\"http://twitter.com/download/android\\\" rel=\\\"nofollow\\\">Twitter for Android</a>\", \"in_reply_to_status_id\": null, \"in_reply_to_status_id_str\": null, \"in_reply_to_user_id\": null, \"in_reply_to_user_id_str\": null, \"in_reply_to_screen_name\": null, \"geo\": null, \"coordinates\": null, \"place\": null, \"contributors\": null, \"retweeted_status\": {\"created_at\": \"Tue Jan 10 11:01:20 +0000 2017\", \"id\": 818774720019628034, \"id_str\": \"818774720019628034\", \"text\": \"\\u201cIt\\u2019s not bragging if you can back it up.\\u201d - Muhammad Ali\", \"truncated\": false, \"entities\": {\"hashtags\": [], \"symbols\": [], \"user_mentions\": [], \"urls\": []}, \"source\": \"<a href=\\\"http://www.hootsuite.com\\\" rel=\\\"nofollow\\\">Hootsuite</a>\", \"in_reply_to_status_id\": null, \"in_reply_to_status_id_str\": null, \"in_reply_to_user_id\": null, \"in_reply_to_user_id_str\": null, \"in_reply_to_screen_name\": null, \"geo\": null, \"coordinates\": null, \"place\": null, \"contributors\": null, \"is_quote_status\": false, \"retweet_count\": 3, \"favorite_count\": 6, \"favorited\": false, \"retweeted\": true, \"lang\": \"en\"}, \"is_quote_status\": false, \"retweet_count\": 3, \"favorite_count\": 0, \"favorited\": false, \"retweeted\": true, \"lang\": \"en\"}, \"contributors_enabled\": false, \"is_translator\": false, \"is_translation_enabled\": false, \"profile_background_color\": \"000000\", \"profile_background_image_url\": \"http://abs.twimg.com/images/themes/theme14/bg.gif\", \"profile_background_image_url_https\": \"https://abs.twimg.com/images/themes/theme14/bg.gif\", \"profile_background_tile\": false, \"profile_image_url\": \"http://pbs.twimg.com/profile_images/439356435466440704/Lfst52_W_normal.jpeg\", \"profile_image_url_https\": \"https://pbs.twimg.com/profile_images/439356435466440704/Lfst52_W_normal.jpeg\", \"profile_banner_url\": \"https://pbs.twimg.com/profile_banners/2166402500/1439153628\", \"profile_link_color\": \"9266CC\", \"profile_sidebar_border_color\": \"000000\", \"profile_sidebar_fill_color\": \"000000\", \"profile_text_color\": \"000000\", \"profile_use_background_image\": false, \"has_extended_profile\": false, \"default_profile\": false, \"default_profile_image\": false, \"following\": false, \"follow_request_sent\": false, \"notifications\": false, \"translator_type\": \"regular\"}"
         }
     },
     {
         "model": "admin.logentry",
         "pk": 1,
         "fields": {
-            "action_time": "2016-03-08T19:59:08.415Z",
-            "user": 2,
+            "action_time": "2017-01-13T09:58:39.482Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "anonymous",
+            "action_flag": 1,
+            "change_message": "Added."
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2017-01-13T10:18:18.888Z",
+            "user": 1,
             "content_type": 6,
             "object_id": "1",
             "object_repr": "localhost:8000",
@@ -602,25 +856,12 @@
     },
     {
         "model": "admin.logentry",
-        "pk": 2,
-        "fields": {
-            "action_time": "2016-03-08T19:59:40.389Z",
-            "user": 2,
-            "content_type": 12,
-            "object_id": "1",
-            "object_repr": "phedit",
-            "action_flag": 1,
-            "change_message": "Added."
-        }
-    },
-    {
-        "model": "admin.logentry",
         "pk": 3,
         "fields": {
-            "action_time": "2016-03-11T12:57:54.543Z",
-            "user": 2,
-            "content_type": 12,
-            "object_id": "2",
+            "action_time": "2017-01-13T10:25:11.534Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "1",
             "object_repr": "phedit",
             "action_flag": 1,
             "change_message": "Added."
@@ -630,9 +871,22 @@
         "model": "admin.logentry",
         "pk": 4,
         "fields": {
-            "action_time": "2016-03-11T12:58:53.008Z",
-            "user": 2,
-            "content_type": 12,
+            "action_time": "2017-01-13T10:25:57.396Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "2",
+            "object_repr": "phedit",
+            "action_flag": 1,
+            "change_message": "Added."
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2017-01-13T10:26:20.496Z",
+            "user": 1,
+            "content_type": 13,
             "object_id": "3",
             "object_repr": "phedit",
             "action_flag": 1,
