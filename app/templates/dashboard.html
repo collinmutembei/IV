@@ -46,7 +46,7 @@
                 <div class="panel-body">
                     {% verbatim %}
                     <div id="button-wrapper">
-                        <button ngf-select="upload($file)" ngf-pattern="'image/*'" ngf-accept="'image/*'" ng-hide="hide_upload_btn">
+                        <button ngf-select="upload($file)" ngf-pattern="'image/*'" ngf-accept="'image/*'" ng-hide="hide_upload_btn" onClick="fbq('track', 'New Upload');">
                             <p>Upload an image</p>
                         </button>
                         <button type="button" ng-hide="!loading">
