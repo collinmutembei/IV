@@ -7,11 +7,81 @@
 <div class="people-search">
   <div></div>
   <div class="people-filters">
-    <p>filters go here</p>
+    <div class="stem-filter">
+      <p>STEM Interests filter</p>
+      <ul>
+        <li><input type="checkbox">one</li>
+        <li><input type="checkbox">two</li>
+        <li><input type="checkbox">three</li>
+        <li><input type="checkbox">four</li>
+      </ul>
+    </div>
+    <div class="role-filter">
+      <p>Role filter</p>
+      <ul>
+        <li><input type="radio">one</li>
+        <li><input type="radio">two</li>
+        <li><input type="radio">three</li>
+        <li><input type="radio">four</li>
+      </ul>
+    </div>
+    <div class="group-filter">
+      <p>Group filter</p>
+      <ul>
+        <li><input type="checkbox">one</li>
+        <li><input type="checkbox">two</li>
+        <li><input type="checkbox">three</li>
+        <li><input type="checkbox">four</li>
+      </ul>
+    </div>
+    <div class="age-filter">
+      <p>Age filter</p>
+      <ul>
+        <li><input type="radio">one</li>
+        <li><input type="radio">two</li>
+        <li><input type="radio">three</li>
+      </ul>
+    </div>
+    <div class="looking-filter">
+      <p>Looking for team filter</p>
+      <ul>
+        <li><input type="checkbox">one</li>
+        <li><input type="checkbox">two</li>
+      </ul>
+    </div>
   </div>
   <div></div>
   <div class="people-results">
-    <p>results go here</p>
+    <div class="result-container">
+      <div class="result-card">
+        <a href="/profile/uuid">
+          <div class="result-user-image">
+            <img src="http://via.placeholder.com/150x150" alt="user-image">
+          </div>
+          <div class="result-user-name">
+            <h6>item.display_name</h6>
+          </div>
+          <div class="result-user-looking">
+            <h6>item.looking_for_team</h6>
+          </div>
+          <div class="result-user-group">
+            <h6>item.user_group</h6>
+          </div>
+          <div class="result-user-location">
+            <h6>item.state_or_province, item.country_name</h6>
+          </div>
+          <div class="result-user-interests">
+            <ul>
+              <li>item.stem_interest_one</li>
+              <li>item.stem_interest_two</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="">
+      <p>Load More</p>
+    </div>
   </div>
   <div></div>
 </div>
