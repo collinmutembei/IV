@@ -24,3 +24,8 @@ def gallery(request):
     if request.user.is_authenticated():
         return render(request, 'gallery.html')
     return HttpResponseRedirect("/")
+
+def cssgrid(request=None):
+    """ learning CSS Grisd 101
+    """
+    return render(request, 'cssgrid.html')
