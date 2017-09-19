@@ -658,5 +658,45 @@ input[type=checkbox] {
 
 .people-search {
   display: grid;
-  grid-template-columns: 10% 30% 5% 45% 10%;
+  grid-template-columns: 3fr 7fr;
+  grid-column-gap: 1em;
+}
+
+@media only screen
+and (max-device-width: 736px) {
+  .people-search {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.people-results {
+  border: 1px solid red;
+  display: grid !important;
+  grid-auto-rows: 90% 10%;
+  padding: 1em;
+}
+
+.people-filters {
+  border: 1px solid blue;
+  display: grid !important;
+  grid-template-rows: repeat(5, 1fr)
+}
+
+.results-container {
+  border: 1px solid green;
+  display: grid !important;
+}
+
+.result-card {
+  display: grid !important;
+  grid-template-columns: 3fr 4fr 3fr;
+  border: 1px solid black;
+  grid-column-gap: .5em;
+  padding: 1em;
+}
+
+.load-more {
+  display: grid;
+  justify-items: center;
 }
