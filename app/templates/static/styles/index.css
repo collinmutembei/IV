@@ -655,3 +655,8 @@ input[type=checkbox] {
     left: 50%;
     margin-left: -150px;
 }
+
+.people-search {
+  display: grid;
+  grid-template-columns: 10% 30% 5% 45% 10%;
+}
