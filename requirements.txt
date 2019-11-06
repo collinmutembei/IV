@@ -48,7 +48,7 @@ python-mimeparse==1.5.1
 python-ptrace==0.8.1
 python3-openid==3.0.9
 PyYAML==3.11
-requests==2.7.0
+requests==2.20.0
 requests-cache==0.4.10
 requests-oauthlib==0.6.1
 sh==1.11
