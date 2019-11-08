@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+
+[packages]
+django = "*"
+dj-database-url = "*"
+djangorestframework = "*"
+psycopg2 = "*"
+requests = "*"
+pillow = "*"
+django-allauth = "*"
+gunicorn = "*"
+django-nose = "*"
+coverage = "*"
+
+[requires]
+python_version = "3.7"

@@ -1,0 +1,42 @@
+version: '3.7'
+services:
+  db:
+    image: collinmutembei/postgres:multiuser
+    healthcheck:
+      test:
+       - CMD
+       - pg_isready
+       - -U
+       - postgres
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    environment:
+      POSTGRESQL_PASSWORD: postgreskcQGUwD7DehPNRXrCuZw
+      POSTGRES_MULTIPLE_DATABASES: phedit, pheditfJYgRDBKBIHFhgTFIIJ9DGU;
+      POSTGRES_USER: postgres
+    volumes:
+      - .pgdata:/var/lib/postgresql/data
+    ports:
+     - 5432:5432
+    networks:
+     - default
+    logging:
+      driver: json-file
+  phedit:
+    image: collinmutembei/phedit:3.7.4
+    environment:
+      SECRET: sjkegw3skchgQGUhgFwD7Deh
+      DATABASE_URL: postgres://phedit:pheditfJYgRDBKBIHFhgTFIIJ9DGU@db:5432/phedit
+    ports:
+     - 8000:8000
+    networks:
+     - default
+    logging:
+      driver: json-file
+networks:
+  default:
+    driver: overlay
+volumes:
+  .pgdata:
+
