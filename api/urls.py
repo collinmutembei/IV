@@ -1,4 +1,4 @@
-from django.conf.urls import url, include
+from django.urls import path, include
 from rest_framework import routers
 from api.viewsets import (
     UserViewset,
@@ -14,6 +14,6 @@ router.register(r'phedited',  PheditedImageViewset)
 router.register(r'saved',  FinalImageViewset)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls)),
+    path('auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
