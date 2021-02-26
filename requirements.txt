@@ -1,4 +1,4 @@
-aiohttp==0.21.0
+aiohttp==3.7.4
 appnope==0.1.0
 blessings==1.6
 chardet==2.3.0
