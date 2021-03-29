@@ -39,7 +39,7 @@ Pillow==7.1.0
 pinax-cli==0.5
 psycopg2
 ptyprocess==0.5.1
-Pygments==2.1.1
+Pygments==2.7.4
 PyJWT==1.4.0
 pyquery==1.2.11
 python-coveralls==2.6.0
