@@ -25,7 +25,7 @@ gnureadline==6.3.3
 gunicorn
 humanize==0.5.1
 ipdb==0.9.0
-ipython==4.1.1
+ipython==7.16.3
 ipython-genutils==0.1.0
 lxml==3.5.0
 netifaces==0.10.4
